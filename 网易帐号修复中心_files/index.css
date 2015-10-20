@@ -1,0 +1,821 @@
+body {
+	
+}
+
+.validate_error {
+	border: 1px solid #c7bf93;
+	border-radius: 4px;
+	padding: 6px 8px;
+	min-width: 50px;
+	max-width: 220px;
+	color: #000;
+	background-color: #ffcccc;
+	font: 12px/16px arial, helvetica, sans-serif;
+}
+
+.text-ul {
+	margin-left: 80px;
+	margin-right: 80px;
+	font-size: 13px;
+}
+
+.sp-tit {
+	margin-left: 80px;
+	margin-right: 80px;
+	font-size: 12px;
+}
+
+.zs {
+	text-indent: 30px;
+	margin-left: 20px;
+	margin-bottom: 8px;
+}
+
+.warn {
+	max-width: 768px;
+	margin: 15px auto;
+	background-color: #fff9c9;
+	border: 1px solid #c7bf93;
+	padding: 5px;
+	font-size: 13px;
+}
+
+.split {
+	border-bottom: 1px dotted #cbcbcb;
+	margin-bottom: 15px;
+	padding-bottom: 14px;
+}
+
+.ts {
+	position: absolute;
+	z-index: 1000;
+	text-align: left;
+	border: 1px solid #c7bf93;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding: 6px 8px;
+	min-width: 50px;
+	max-width: 220px;
+	color: #000;
+	background-color: #fff9c9;
+	font: 12px/16px arial, helvetica, sans-serif;
+	float: left;
+	display: none;
+}
+.ts-175{
+	max-width: 175px;
+}
+
+.ts_error {
+	background-color: #ffcccc;
+}
+
+.tx {
+	float: left;
+	width: 584px;
+	height: 330px;
+	padding: 22px 28px
+}
+
+.tx h3 {
+	font-weight: bold;
+	margin-bottom: 10px
+}
+
+.tx h3 .error {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.tx .ts {
+	position: absolute;
+	z-index: 1000;
+	text-align: left;
+	border: 1px solid #c7bf93;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding: 6px 8px;
+	min-width: 50px;
+	max-width: 210px;
+	color: #000;
+	background-color: #fff9c9;
+	font: 12px/16px arial, helvetica, sans-serif;
+}
+
+.xz {
+	border: none;
+	width: auto
+}
+
+.mm {
+	font-size: 12px
+}
+
+.dlk {
+	width: 666px
+}
+
+.xflc {
+	width: 903px;
+	height: 161px;
+	background-image: url(../images/zhxf-ban1.jpg);
+	margin: 10px auto
+}
+.epayxflc {
+	width: 903px;
+	height: 161px;
+	background-image: url(../images/zhxf-ban2.jpg);
+	margin: 10px auto
+}
+
+.notice {
+	float: right;
+	font-size: 12px;
+	width: 281px;
+	height: 330px;
+	border-left: 1px solid #e7e7e7;
+	background: #e7f3f4;
+	padding: 22px 18px;
+}
+
+.notice h3 {
+	font-weight: bold;
+	margin-bottom: 10px
+}
+
+.notice-ul li {
+	overflow: hidden;
+	margin-bottom: 10px;
+	background: url(../images/li-ico.gif) no-repeat left 9px;
+	padding-left: 10px;
+}
+
+.notice .game-xyq,.notice .game-xy2 {
+	float: left;
+	margin-top: 7px;
+	padding-left: 35px;
+	width: 100px;
+	height: 33px;
+	line-height: 32px;
+}
+
+.notice .game-xyq {
+	background: url(../images/xyq.gif) no-repeat 0 0;
+}
+
+.notice .game-xy2 {
+	background: url(../images/xy2.gif) no-repeat 0 0;
+}
+
+.inp-short-no,.inp-short,.inp-mid,.inp-long,.inp-med {
+	border: none;
+	height: 34px;
+	vertical-align: middle;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	margin-right: 0;
+	padding-bottom: 3px
+}
+
+.inp-short {
+	width: 99px;
+	background: url(../images/btn.png) no-repeat 0 -40px;
+}
+
+.inp-short-no {
+	width: 99px;
+	background: url(../images/btn.png) no-repeat 0 0;
+	cursor: auto
+}
+
+.inp-long {
+	width: 210px;
+	background: url(../images/btn.png) no-repeat 0 -127px;
+	margin-left: 105px
+}
+
+.inp-med {
+	width: 171px;
+	background: url(../images/btn.png) no-repeat 0 -170px;
+}
+
+.inp-ll {
+	width: 50px;
+	height: 24px;
+	background: url(../images/btn.png) no-repeat 0 -89px;
+	border: none;
+	color: #333333;
+	cursor: pointer;
+}
+/*网易宝*/
+.wybxf {
+	padding: 20px 30px;
+	display: none;
+}
+
+.wybxf .sm {
+	margin-bottom: 26px;
+	text-indent: 28px
+}
+
+.wybxf .dlk {
+	margin: 0 auto;
+	width: 767px
+}
+
+.wybxf .title {
+	margin: 0 auto 10px auto;
+	width: 713px;
+	height: 51px;
+	text-indent: -9999px
+}
+
+.wybxf .title1 {
+	background: url(../images/step_1.jpg) no-repeat;
+}
+
+.wybxf .title2 {
+	background: url(../images/step_2.jpg) no-repeat;
+}
+
+.wybxf .title3 {
+	background: url(../images/step_3.jpg) no-repeat;
+}
+
+
+
+.wybxf h3,.xfzlbc h3,.xfjgcx h3 {
+	text-indent: 30px;
+	margin-left: 20px;
+	margin-bottom: 8px;
+}
+
+.wybxf .inp-short,.wybxf .inp-short-no {
+	margin-left: 150px;
+}
+
+.wybxf .tab-jl {
+	width: 666px;
+	margin: 0 auto 15px auto
+}
+
+.wybxf .tab-jl input {
+	width: 121px;
+	height: 22px;
+	margin-right: 0
+}
+
+.next-bot {
+	width: 357px;
+	margin: 10px auto
+}
+
+.back-link {
+	padding-left: 10px;
+	font-size: 12px;
+}
+
+.dwk {
+	width: 418px;
+	height: 117px;
+	border: 1px solid #bbb
+}
+
+.wybxf .no-left {
+	margin-left: 0
+}
+
+.wybxf-end {
+	width: 411px;
+	padding: 11px 50px;
+	background: url(../images/yes.gif) no-repeat left top;
+	margin: 0 auto
+}
+/* 密保挂失 */
+.ul-nav-lose {
+	position: absolute;
+	bottom: 0;
+	width: 960px;
+	height: 60px;
+	background: url(../images/nav-guashi.jpg) no-repeat 0 0;
+}
+/* 帐号找回 */
+.ul-nav-zhaohui {
+	position: absolute;
+	bottom: 0;
+	width: 960px;
+	height: 60px;
+	background: url(../images/nav-zhaohui.jpg) no-repeat 0 0;
+}
+/* 解除封停 */
+.ul-nav-ft {
+	position: absolute;
+	bottom: 0;
+	width: 960px;
+	height: 60px;
+	background: url(../images/nav-ft.jpg) no-repeat 0 0;
+}
+/* 短信修复通道 */
+.ul-nav-dx {
+	position: absolute;
+	bottom: 0;
+	width: 960px;
+	height: 60px;
+	background: url(../images/nav-dx.jpg) no-repeat 0 0;
+}
+
+.dx .title {
+	height: 32px;
+	margin-top: 10px
+}
+
+.dx .title h3 {
+	padding-left: 31px;
+	font-size: 14px;
+	font-weight: bold
+}
+
+.dx .dlk {
+	margin-left: 60px;
+}
+
+.dx-box {
+	width: 767px;
+	margin: 0 auto 20px auto
+}
+
+.dx-box h4 {
+	margin-top: 8px;
+	font-weight: bold;
+}
+/* 取回被盗物品 */
+.ul-nav-bd {
+	position: absolute;
+	bottom: 0;
+	width: 960px;
+	height: 60px;
+	background: url(../images/nav-bd.jpg) no-repeat 0 0;
+	text-indent: -9999px
+}
+
+.netease .sd {
+	width: 600px;
+	margin: 20px auto
+}
+
+.netease .sd a {
+	margin-right: 15px
+}
+
+.netease .left-kuan {
+	padding-left: 87px;
+}
+
+.netease .left-kuan h3 {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px
+}
+
+.tbsq td {
+	width: 130px;
+	height: 48px;
+}
+
+.tbsq td a {
+	float: left;
+	line-height: 38px;
+}
+/*账号修复*/
+.zhxfsq {
+	padding: 20px 30px 50px 30px;
+	display: none;
+}
+
+.zhxfsq .sm {
+	margin-bottom: 26px;
+	text-indent: 28px
+}
+
+.zhxfsq .dlk {
+	margin: 0 auto;
+	width: 767px
+}
+
+.zhxfsq .title {
+	margin: 0 auto 10px auto;
+	width: 713px;
+	height: 51px;
+	text-indent: -9999px;
+}
+
+.zhxfsq .title1 {
+	background: url(../images/step_1.jpg) no-repeat;
+}
+
+.zhxfsq .title2 {
+	background: url(../images/step_2.jpg) no-repeat;
+}
+
+.zhxfsq .title3 {
+	background: url(../images/step_3.jpg) no-repeat;
+}
+
+
+
+.zhxfsq h3 {
+	text-indent: 30px;
+	margin-bottom: 15px;
+}
+
+.xshm {
+	width: 18px;
+}
+
+.zhxfsq .inp-short,.zhxfsq .inp-short-no,.xfzlbc .inp-short,.xfzlbc .inp-short-no
+	{
+	margin-left: 150px;
+}
+
+.zhxfsq .input-short {
+	width: 44px
+}
+
+.pic-sf img {
+	width: 80px;
+	height: 80px;
+	border: 1px solid #ddd;
+	margin-right: 5px
+}
+
+.pic-sf .tips {
+	width: 549px;
+	margin: 0 auto
+}
+
+.pic-sf .tips .ul-tip {
+	padding-left: 112px
+}
+
+.pic-sf .tips .ul-tip li {
+	margin-bottom: 5px
+}
+
+.zbsx-sf strong {
+	display: block;
+	color: #000
+}
+
+.zbsx-sf {
+	float: left;
+	width: 97px;
+	height: 124px;
+	border-right: 1px dotted #ddd
+}
+/*修复资料补充*/
+.xfzlbc {
+	padding: 20px 30px 50px 30px
+}
+
+.xfzlbc .bczl,.xfjgcx .bczl {
+	width: 894px;
+}
+
+.xfzlbc .bczl h3,.xfjgcx .bczl h3 {
+	font-weight: bold;
+	height: 60px
+}
+
+.xfzlbc .bczl h3 a,.xfjgcx .bczl h3 a {
+	float: right;
+	font-weight: normal;
+	font-size: 12px
+}
+
+.d1 .sp,.d1 .sp-inp {
+	margin: 10px auto;
+	width: 362px;
+	text-align: center
+}
+
+.d1 .sp .pic-kuan {
+	width: 360px;
+	height: 240px;
+	border: 1px solid #ddd;
+	background: #6ce5ff;
+	display: block;
+}
+
+.d1 .sp-inp .inp-ll {
+	margin-left: 5px;
+	margin-right: 5px
+}
+
+.d1 .sp-zy {
+	margin-top: 10px;
+	text-align: center;
+	color: #fe0000;
+	font-size: 12px
+}
+
+.d1 .sp-tj {
+	margin: 50px auto;
+	width: 99px;
+}
+
+.xfzlbc .dlk,.xfjgcx .dlk {
+	margin: 0 auto;
+	width: 767px;
+}
+
+.jjl {
+	float: left;
+	background: #F6F6F6;
+	border: 1px solid #EDEDED;
+	width: 501px;
+	padding: 10px
+}
+
+.jjl p {
+	margin-bottom: 7px
+}
+
+.jjl .tit-name {
+	float: left;
+	width: 112px;
+	text-align: right;
+}
+
+.xfzlbc .dlk .wbk {
+	width: 521px;
+	height: 125px;
+	border: 1px solid #ddd;
+}
+
+.xfzlbc .dlk .inp-short {
+	margin-left: 0
+}
+/*修复结果查询*/
+.xfjgcx {
+	padding: 20px 30px 50px 30px
+}
+
+.line {
+	border-bottom: 1px dotted #CBCBCB;
+	margin-bottom: 15px;
+	padding-bottom: 18px;
+	font-size: 14px;
+	font-weight: bold
+}
+
+.line .pic-zt {
+	width: 142px;
+	margin: 0 auto
+}
+
+.line .pic-ztsm {
+	width: 342px;
+	margin: 0 auto;
+	text-align: center
+}
+
+.xfjgcx .inp-end {
+	width: 300px;
+	margin: 10px auto;
+	overflow: hidden;
+	text-align: center
+}
+
+.xfjgcx .tit {
+	font-weight: bold
+}
+
+.xfjgcx .bq {
+	width: 710px;
+	margin: 20px auto
+}
+
+.xfjgcx .bg-text {
+	float: left;
+	margin-left: 132px;
+	display: inline;
+	width: 685px;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+}
+
+.xfjgcx .bg-text .bg-text-s {
+	font-weight: bold
+}
+
+.xfjgcx .bg-text .bg-text-end {
+	text-align: right;
+	padding-right: 15px;
+}
+
+.xfjgcx .title {
+	margin: 0 auto 10px auto;
+	width: 544px;
+	height: 51px;
+	text-indent: -9999px
+}
+
+.xfjgcx .title1 {
+	background: url(../images/xfjgcx-title.jpg) no-repeat 0 0;
+}
+
+.xfjgcx .title2 {
+	background: url(../images/xfjgcx-title.jpg) no-repeat 0 -51px;
+}
+
+.xfjgcx .title3 {
+	background: url(../images/xfjgcx-title.jpg) no-repeat 0 -102px;
+}
+
+.xfjgcx .bz1,.xfjgcx .bz2 {
+	width: 768px;
+	margin: 15px auto
+}
+
+.xfjgcx .xmb {
+	background: #e7f3f4;
+	border: 1px solid #EDEDED;
+	width: 705px;
+	padding: 20px 30px;
+	margin: 15px auto
+}
+
+.xfjgcx .bz1 .xmb .xz-rad {
+	margin-bottom: 20px
+}
+
+.xfjgcx .bz1 .xmb .xz-ul {
+	margin: 15px
+}
+
+.xfjgcx .bz1 .xmb .xz-ul input {
+	border: 1px solid #bbbbbb;
+	width: 201px;;
+	height: 22px;
+	line-height: 22px;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+.xfjgcx .bz1 .xmb .xz-ul li {
+	margin-bottom: 12px
+}
+
+.xfjgcx .bz1 .xmb .xz-fk {
+	margin-left: 20px
+}
+
+.xfjgcx .bz3 .xmb .remind {
+	text-align: center
+}
+
+.xfjgcx .bz3 {
+	width: 881px;
+	margin: 15px auto
+}
+
+.dcxt {
+	width: 700px;
+	margin-left: 68px;
+	font-size: 12px
+}
+
+.dcxt .radio_set label {
+	margin-right: 8px;
+}
+
+.dcxt input {
+	width: 30px;
+	margin-right: 0px;
+	margin-left: 8px
+}
+
+ .dcxt td {
+	padding: 1px
+}
+
+.dcxt .wbk {
+	width: 650px;
+	height: 100px;
+	border: 1px solid #ddd;
+	margin-left: 8px;
+	font-size: 12px;
+}
+
+.xfjgcx .mbbd-tab {
+	width: 580px;
+	margin-left: 18px;
+}
+
+.xfjgcx .mbbd-tab input {
+	width: 18px;
+	margin-right: 0px;
+	margin-left: 12px;
+	　
+}
+
+.xfjgcx .mbbd-tab table {
+}
+
+.xfjgcx .mbbd-tab td {
+	padding: 1px
+}
+
+/***/
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+
+.btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-info {
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  color: #ffffff;
+  background-color: #39b3d7;
+  border-color: #269abc;
+}
+
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  background-image: none;
+}
+
+.text-danger {
+  color: #ff0000;
+}
+
+.my-dialog .ui-dialog-titlebar-close{
+display: none;
+}
+
+.moreInfor label {
+    background: url("../../images/youxiang/ts1.0/labelBg.png") no-repeat scroll 0 -42px ;
+    display: inline-block;
+    font-size: 12px;
+    height: 42px;
+    line-height: 42px;
+    margin-right:4px;
+    text-align: center;
+    width:147px;
+}
+
+/* 
+ * edit by xy 2014-11-06
+ */
+#mobileCheck{margin: 0 0 0 35px;width:250px;}
+#mobileCheck th{width:100px;}
+#mobileCheck input{width:150px;}
+#mobileCheck:after{clear:both;}
