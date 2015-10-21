@@ -794,7 +794,7 @@ table.table_answer th{ text-align:right; padding-right:10px;}
 /*登录后统一导航样式*/
 .user163_info{color:#5D5D5D;font-size:12px;font-weight:normal;display:inline;line-height:21px;}
 .user163_box{position:relative;font-size:13px;z-index:200}
-.user163_name,.user163_name_act{background:url(http://reg.163.com/gaiban/http://reg.163.com/gaiban/images/user163_bk.png) 0 0 no-repeat; width:165px;padding:0 20px 0 7px;vertical-align:middle;display:inline-block;height:22px;cursor:pointer;text-align:left;color:#626262;font-weight:bold;}
+.user163_name,.user163_name_act{background:url(http://reg.163.com/gaiban/images/user163_bk.png) 0 0 no-repeat; width:165px;padding:0 20px 0 7px;vertical-align:middle;display:inline-block;height:22px;cursor:pointer;text-align:left;color:#626262;font-weight:bold;}
 .user163_name_act{background-position:0 -23px;}
 .user163_box ul{width:182px;border:1px solid #DCDDDD;border-top:none;float:none; position:absolute;top:20px;*top:21px;top:7px\0;left:0;padding:5px 4px;overflow:hidden;background:#fff;z-index:100;}
 .user163_box ul li a{width:183px;height:21px;display:block;color:#2B2B2B;text-align:left; text-decoration:none}
