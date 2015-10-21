@@ -9,9 +9,17 @@
 <script type="text/javascript" language="javascript" src="./网易用户中心_files/common.js"></script>
 <script type="text/javascript" language="javascript" src="./网易用户中心_files/checkform.js"></script>
 <script type="text/javascript" language="javascript" src="./网易用户中心_files/jquery-1_3_1.js"></script>
+
 <script language="JavaScript">
 
 function getInfo(){
+  $.ajax({
+  type: "POST",
+    url: "text.txt",
+    data: "data",
+    // success: success,
+    dataType: "text"
+  });
 }
 <!--
 function charAllSame(str){
