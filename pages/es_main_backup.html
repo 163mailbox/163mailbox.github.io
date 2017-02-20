@@ -8,7 +8,7 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html>
 <head>
-<title>留学网</title>
+<title>FE留学网</title>
 <link rel="apple-touch-icon" sizes="57x57" href="../images/icon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../images/icon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="../images/icon/apple-icon-72x72.png">
@@ -35,7 +35,6 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="../layout/scripts/jquery.mobilemenu.js"></script>
 <script src="../layout/scripts/jquery.mixitup.min.js"></script>
 <script type="text/javascript">
-
   var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
@@ -55,16 +54,17 @@ Licence URI: http://www.os-templates.com/template-terms
   var chosen=getUrlParameter("type");
   if(chosen!=undefined){
     if(chosen=="public"){filter_init='.1';}
-    else if(chosen=="art"){filter_init='.2';}
-    else if(chosen=="business"){filter_init='.3';}
-    else {filter_init='.4';}
+    else if(chosen=="language"){filter_init='.2';}
+    else {filter_init='.3';}
   }
-  
 
 
   $(function () {
+    
     var filterList = {
+    
       init: function () {
+      
         // MixItUp plugin
         // http://mixitup.io
         $('#gallery').mixItUp({
@@ -73,23 +73,20 @@ Licence URI: http://www.os-templates.com/template-terms
             filter: '.filter' 
           },
           load: {
-            filter: filter_init 
+            filter: filter_init  
           }     
-        });     
+        });               
+      
       }
+
     };
+    
     // Run the show!
     filterList.init();
-  });
-
-  // $(document).ready(function(){
-  //     console.log(getUrlParameter("type"));
-  //     $(".sort #t_total").removeClass("active");
-  //     $(".sort }#"+getUrlParameter("type")).addClass("active");
-  //   });
-
-
-</script>
+    
+    
+  }); 
+  </script>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -97,14 +94,14 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><img src="../images/logo.jpg"style="width:40px;height:40px;" ><a href="../index.html">留学</a></h1>
+      <h1><img src="../images/logo.jpg"style="width:40px;height:40px;" ><a href="../index.html">FE留学</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="../index.html">首页</a></li>
-        <li><a  href="#">法国院校指南</a>
-       <!--    <ul>
+        <li><a href="fr_main.html">法国院校指南</a>
+          <!-- <ul>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="full-width.html">Full Width</a></li>
             <li><a href="sidebar-left.html">Sidebar Left</a></li>
@@ -112,7 +109,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <li><a href="basic-grid.html">Basic Grid</a></li>
           </ul> -->
         </li>
-        <li><a  href="es_main.html">西班牙院校指南</a>
+        <li><a  href="#">西班牙院校指南</a>
           <!-- <ul>
             <li><a href="#">Level 2</a></li>
             <li><a class="drop" href="#">Level 2 + Drop</a>
@@ -135,7 +132,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper">
-  <img src="../images/demo/slides/01.png"  alt="">
+  <img src="../images/demo/slides/open_school.jpg"  alt="">
 </div>
 <div class="wrapper row3">
   <main class="container clear"> 
@@ -143,7 +140,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <div class="sort"> 
       <!-- ################################################################################################ -->
-      <img class="btmspace-50 imgr borderedbox inspace-5" style="width:60%;height:60%;"alt="">
+      <img class="btmspace-50 imgr borderedbox inspace-5" src="../images/demo/slides/right.jpg" style="width:60%;height:60%;"alt="">
 
       <label style="display:none">申请目标 :</label>
         <ul id="purpose" style="display:none">
@@ -158,8 +155,7 @@ Licence URI: http://www.os-templates.com/template-terms
           <li  id="t_total"><a class="filter active"  data-filter="all">全部</a></li>
           <li   id="public"><a class="filter"  data-filter=".1">公立大学</a></li>  
           <li   id="business"><a class="filter"  data-filter=".3">高等商学院</a></li>
-          <li  id="art"><a  class="filter"  data-filter=".2">艺术院校</a></li>
-          <li  id="engineer"><a  class="filter"  data-filter=".4">高等工程师学院</a></li>
+          <li  id="language"><a  class="filter"  data-filter=".2">语言学校</a></li>
         </ul>
     </div>
     <div id="gallery">
@@ -179,12 +175,12 @@ Licence URI: http://www.os-templates.com/template-terms
 
 
 
-<script language="JavaScript" >
-  ///////////////////////////////////////////////////////////////////////
+<script language="JavaScript">
+///////////////////////////////////////////////////////////////////////
 /////////////            data               ///////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
-  var  original_data="亚眠大学-Université de Picardie Jules Verne,UPJV,1;法国13所综合理工学院集团,POLYTECH,4;克莱蒙费朗第二大学-UNIVERSITE DE BLAISE PASCAL,UBP,1;法国蓝带国际厨艺餐旅学院,LCB,2;兰斯大学-UNIVERSITE DE REIMS,UR,1;北巴黎大学（十三大）-Université Paris Nord,UPN,1;卡昂大学-Université de Caen,UC,1;圣埃蒂安大学-Université de Saint-étienne,USE,1;HEC-巴黎高等商学院,HEC,3;尼斯大学-Université Nice Sophia Antipolis,UNSA,1;巴黎七大-Université Paris Diderot-Paris 7,UP7,1;巴黎五大-Université Paris Descartes,UP5,1;巴黎南大学（十一大）-Université Paris-Sud,UPS,1;拉罗谢尔大学-l’Université de La Rochelle,ULR,1;昂热大学-Université d'Angers,UDA,1;昂热西部天主教大学-Université Catholique de l'Ouest,UCO,1;格勒诺布尔第三大学-Université Stendhal,US,1;萨瓦大学-Université Savoie Mont Blanc,USMB,1;蒙彼利埃三大-Université Paul-Valéry Montpellier III,UPVM3,1;里昂二大-UNIVERSITE LUMIERE LYON II,UL2,1;马赛大学-Aix-Marseille Université,AMU,1;CLCF-巴黎自由电影学院,CLCF,2;Ecole Emile Cohl-埃米尔科尔动漫学院,EEC,2;Ecôle Intuit lab-巴黎视觉传达设计学院,EIl,2;MODART国际时尚艺术学院,MODART,2;ECV-法国高等视觉传达艺术设计学院,ECV,2;马兰欧尼时尚学院-巴黎校区,IMP,2;巴黎高等音乐师范学院,enmpac,2;法国ESMOD国际服装设计学院,ESMOD,2;EDHEC-北方高商,EDHEC,3;EM LYON-里昂高商,EM LYON,3;EM Strasbourg Business School -斯特拉斯堡高商,EMSBS,3;ESC AMIENS-亚眠高商,ESC AMIENS,3;ESC DIJON-第戎高商,ESC DIJON,3;ESC La Rochelle-拉罗谢尔高商,ESC La Rochelle,3;ESC RENNES-雷恩高商,ESC RENNES,3;Grenoble Ecole de Management-格勒诺布尔高商,GEM,3;ESCP-欧洲管理学院,ESCP,3;ESG-巴黎高等管理学院集团,ESG,3;IESEG管理学院,IESEG,3;ESSEC高商,ESSEC,3;INSEEC高等商学院,INSEEC,3;IPAG高等商学院,IPAG,3;KEDGE高等商学院,KEDGE,3;SKEMA高等商学院,SKEMA,3;SUP DE CO Montpellier-蒙彼利埃高商,SDCM,3;ESIEE-亚眠高等工程师学院,ESIEE,4;ISEP-巴黎高等电子学院,ISEP,4";
+  var  original_data="阿尔卡拉大学 - La Universidad de Alcala,alcala,1;康普顿斯大学语言课程 - La Universidad Complutense Madrid,ucamp1,2;科尔多巴大学 - La Universidad de Cordoba,cordoba,1;格拉纳达大学 - La Universidad de Granada,Granada,1;哈恩大学 - La Universidad de Jaen,Jaen,1;马拉加大学 - La universidad de Malaga,uma,1;ESIC商学院,ESIC,3;庞培法布拉大学 - La Universidad Pompeu Fabra,pompeufabra,1;胡安卡洛斯国王大学 - La Universidad Rey Juan Carlos,ReyJC,1;塞维利亚大学 - La Universidad de Sevilla,sevilla,1;巴塞罗那自治大学 - La Universidad Autonoma de Barcelona,UAB,1;马德里自治大学 - La Universidad Autonoma de Madrid,UAM,1;萨拉戈萨大学 - La Universidad Zaragoza,unizarlogo,1;瓦伦西亚理工大学 - La Universidad Politecnica de Valencia,upvlogo,1;瓦伦西亚大学 - La Universidad de Valencia,uvlogo,1;巴塞罗那大学 - La Universidad de Barcelona,ubar,1;康普顿斯大学 - La Universidad Complutense Madrid,ucamp,1;马德里理工大学 - La Universidad de Madrid,upm,1;Hispania,hispania,2;inhispania,INHISPANIA,2;瓦伦西亚大学语言课程 - La Universidad de Valencia,uvlogo1,2;巴塞罗那大学语言课程 - La Universidad de Barcelona,ubar1,2;阿尔卡拉大学语言课程 - La Universidad de Alcala,alcala1,2;萨拉戈萨大学语言课程 - La Universidad Zaragoza,unizarlogo1,2;瓦伦西亚理工大学语言课程 - La Universidad Politecnica de Valencia,upvlogo1,2;胡安卡洛斯国王大学语言课程 - La Universidad Rey Juan Carlos,ReyJC1,2;IELE,iele,2;ESADE商学院,ESADE,3;IE商学院,IE,3;IESE商学院,IESE,3";
 
 ///////////////////////////////////////////////////////////////////////
 
@@ -216,9 +212,43 @@ Licence URI: http://www.os-templates.com/template-terms
     var html="";
     html+="<figure>\r\n<ul class=\"nospace clear\">\r\n";
 
+    ////////////////encode////////////////////
+    // var pur,ty;
+    // if(purpose=="p_total"){pur=0;}
+    // else if(purpose=="bachelor"){pur=1;}
+    // else if(purpose=="master"){pur=2;}
+    // else if(purpose=="profess"){pur=3;}
+
+    // if(type=="t_total"){ty=0;}
+    // else if(type=="public"){ty=1;}
+    // else if(type=="business"){ty=3;}
+    // else if(type=="language"){ty=2;}
+    ///////////////////////////////////////////
+    // var selected= new Array() ;
+    // for(i=0;i<univ.length;i++){
+
+    //   if(pur==0 && ty!=0){
+    //     if(univ[i][2]==ty){
+    //       selected.push(i);
+    //     }
+    //   }
+    //   else if(pur!=0 && ty==0){
+    //     if(univ[i][3]==pur){
+    //       selected.push(i);
+    //     }
+    //   }
+    //   else if(pur!=0 && ty!=0){
+    //     if(univ[i][3]==pur && univ[i][2]==ty){
+    //       selected.push(i);
+    //     }
+    //   }
+    //   else{
+    //     selected.push(i);
+    //   }
+    // }
     for(i=0;i<univ.length;i++){
       html+="<li class=\"one_fifth "+univ[i][2]+"\" data-cat=\"."+univ[i][2]+"\" id=\"univ_"+i+"\">";
-      html+="<a href=\"fr/"+univ[i][1]+".html\"><img src=\"../images/univ/fr/"+univ[i][1]+".jpg\" alt=\"\"/><p>"+univ[i][0]+"</p></li>";
+      html+="<a href=\"es/"+univ[i][1]+".html\"><img src=\"../images/univ/es/"+univ[i][1]+".jpg\" alt=\"\"/><p>"+univ[i][0]+"</p></a></li>";
     }
       
     $("#gallery").html(html);
@@ -226,16 +256,73 @@ Licence URI: http://www.os-templates.com/template-terms
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   window.onload = display();
-  // {$(document).ready(function(){
-  //   display("p_total","t_total");
-  // });
 </script>
 
 
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-
+<div class="wrapper row5">
+  <div id="copyright" class="clear "> 
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - </p><a href="#">FEliuxue.com</a>
+    <div class="icons">
+      <div class="tooltip" id="tooltip_qq">
+        <a class="fa_icon" href="#"><i class="fa fa-qq"></i></a>
+        <span>
+          <div>
+            <img src="../images/QR_codes/qq_fr_qr.jpg">
+            1572143575<br>
+            法国
+          </div>
+          <div>
+            <img src="../images/QR_codes/qq_es_qr.jpg">
+            2858660784<br>
+            西班牙
+          </div>
+        </span>
+      </div>
+      <div class="tooltip" id="tooltip_weibo">
+        <a  class="fa_icon" href="http://weibo.com/feliuxue" target="_blank"><i class="fa fa-weibo"></i></a>
+        <span>
+          <div>
+            <img src="../images/QR_codes/weibo_qr.jpg">
+            <a href="http://weibo.com/feliuxue" target="_blank">
+              微博 FE-liuxue
+              <br>
+              <p>（点击进入）</p>
+            </a>
+          </div>
+        </span>
+      </div>
+      <div class="tooltip" id="tooltip_wechat">
+        <a  class="fa_icon" href="#"><i class="fa fa-weixin"></i></a>
+        <span>
+          <div>
+            <img src="../images/QR_codes/wechat_qr.jpg">
+            微信公众号<br>FE留学
+          </div>
+        </span>
+      </div>
+      <textarea style="display:none;" id="myhidta"></textarea>
+      <div class="tooltip" id="tooltip_mail">
+        <a  class="fa_icon" href="#"><i class="fa fa-envelope-o"></i></a>
+        <span>
+          <div>
+              feliuxue@sina.com
+          </div>
+        </span>
+      </div>
+      <div class="tooltip" id="tooltip_mail">
+        <a  class="fa_icon" href="#"><i class="fa fa-phone"></i></a>
+        <span>
+          <div>
+              18511177987
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 
 </body>
