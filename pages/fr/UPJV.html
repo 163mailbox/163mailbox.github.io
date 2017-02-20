@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/UPJV/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/UPJV/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/UPJV/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+/*  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  /*.main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/UPJV/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/UPJV/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/UPJV/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>亚眠大学</h1>
+              
+              <p >
+              亚眠大学（UniversitédePicardie Jules Verne），位于法国东北部的亚眠市，属于皮卡地区的
+                  ，地处巴黎西北部120公里处，交通便利，距巴黎仅一小时车程。全名皮卡底·儒勒-凡尔纳大学，前身为几所分别独立的学校，1968年合并为亚眠大学，这是一所多学院、多学科的法国公立大学。亚眠大学教学中心分布在亚眠市附近的10个小城市里。约有学生23000人，教师1100人。学校有5个主要图书馆，共藏书30万册，期刊3800种，同时每个系都有自己的图书馆。亚眠大学在皮卡底地区6个城市分别设有分校，大部分学院集中在亚眠市，包括：“综合学院”；“经济管理学院”；“科学院”；“医药学院”；“艺术学院”；“教育中心”，在每个学院内设有不同的专业学科，大致分为：人文学、人类社会学、法律与政治、经济与管理、体育、艺术、医药学。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 dark_pagi white_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  亚眠（Amiens，又译阿棉或亚棉），法国北部城市，北部-皮卡第大区（Région Nord-Picardie）索姆省（Somme，80省）的省会和该省人口最多的市镇，亚眠是个风景优美、历史悠久的文化古城，至今依然保留着以前保护巴黎来自北方攻击时代留下的要塞，位于索姆河（La
+                  Somme）畔，地势平坦，是法国北部重要的工商业中心之一。亚眠距离巴黎以北大约140公里，属于巴黎一小时经济圈的范围，每天都有大量人员往返于两地。
+              </p>
+              <p>
+                  这座城市以它在1220年建立的歌德式亚眠大教堂著名，这是法国最宏伟的教堂，并在1981年就被联合国教科文组织注册为世界文化遗产，在年末和夏季的一些日子，还可以看到被修复后教堂门前的原始彩绘的美丽景色。十六世纪时为法国纺织工业中心，主要生产麻、毛、棉织物；工业革命后逐渐成为了一个铁路交通枢纽。十九世纪末期，法国著名作家儒勒·凡尔纳（Jules
+                  Verne）曾长期在亚眠居住，并在此创作了《八十天环游地球》、《神秘岛》等世界名著。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+           
+            <p >
+                <strong>本科阶段：</strong>
+            </p>
+            <p >
+                艺术：
+                造型艺术、戏剧艺术、艺术史与考古、艺术史、戏剧研究、电影与视听研究。
+            </p>
+            <p >
+                文学语言：
+                资料管理、文学与语言、现代文学、实用现代文学、古典文学。
+            </p>
+            <p >
+                法律：
+                司法、法律、公法、私法、政治学、公共管理、商法、国际法、欧洲法、行政科学。
+            </p>
+            <p >
+                经济管理：
+                经济与管理、经济与企业管理、贷币/金融/国际经济。
+            </p>
+            <p>
+                社会科学：
+                社会学、哲学、心理学、历史、地理。
+            </p>
+            <p>
+                自然科学：
+                物质科学、生命科学、物理、化学、生物、细胞生物与生理、生物与地球。
+            </p>
+            <p >
+                <strong>硕士阶段：</strong>
+            </p>
+            <p >
+                行政管理与政治、欧洲法、公法与私法、政治经济学与经济分析、历史与文明、英语国家的语言与文明、法国文学与比较文学、语言理论与分析、组合分析/平等性与模型、哲学的地点与演化、光谱化学与化学系统的反应性。
+            </p>
+            <p >
+                商法、公共管理、农业与食品业的环境、规划与发展、多媒体信息系统、技术与商业推广、临床与病理心理学、组织顾问与技术革新、劳动心理学、人文因素和劳动系统、企业的人口与社会数据、工业媒介与应用、模型与工业应用。
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

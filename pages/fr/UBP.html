@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/UBP/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/UBP/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/UBP/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+/*  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  /*.main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/UBP/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/UBP/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/UBP/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>克莱蒙费朗第二大学</h1>
+              
+              <p>
+                  具有300多年历史的克莱蒙费朗第二大学以世界上第一台手摇计算机发明人BLAISE PASCAL的名字命名，是法国中部闻名的文学、社会科学、外语、自然科学教学和研究中心，共设有九个学院、两个职业技术学校、一个研究院、一个天体物理观测中心和一个外国留学生法语培训中心。
+              </p>
+              <p>
+                  九个学院包括：文学、语言与人文科学院；应用外语、国际贸易与公共关系学院；体育运动与科学学院；心理学、社会学与教育学学院；精密科学与自然科学学院；科学与技术研究院；国际贸易职业学院；工业工程与系统职业学院；大学技术学院。 两个职业技术学院包括：工程师技术学院和化学高等师范学院。
+              </p>
+              <p>
+                  克莱蒙第二大学拥有约15650名注册学生(其中包括近2000名外国学生)和937名教师及研究员。该校是法国中部地区一个特别活跃的多学科综合性大学中心。 学校拥有39个国际著名的研究实验室，其中17个为法国国家科研中心
+                  (CNRS)的合作实验室，2个为国家农学研究院(INRA)的合作单位以及16个受国民教育部研究司认可的研究组，在工程学(所有领域)、精确与自然科学、体育科学、心理学与文学、语言与人文科学等学科的教学质量受国际公认并享有声誉。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 dark_pagi white_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  克莱蒙费朗（Clermont-Ferrand），法国中南部城市，距巴黎350公里，有高速公路、高速火车和飞机直接连接。奥弗涅大区（Région d'Auvergne）的首府和多姆山省（Puy de
+                  Dôme，63号省）的省会，是该地区政治、经济、文化、教育中心，人口30多万，是法国著名的旅游胜地。该市附近的滑雪场是法国三大滑雪胜地之一。
+              </p>
+              <p>
+                  克莱蒙费朗位于中央高原北部的利马涅平原（Limagne）上，西面是纵贯南北的多姆山（Puy de
+                  Dôme），它属于欧洲著名的奥弗涅火山区里最重要的组成部分。克莱蒙费朗由两个部分组成，其中：克莱蒙（Clermont）历史悠久，早在高卢-罗马时期就已成为阿维尔尼人（Arvernes）部落里的一个重要城邦，被命名为奥古斯通讷蒙坦（Augustonemetum）。1630年，根据《特鲁瓦赦令》（Traité
+                  de Troyes），克莱蒙与其东北侧的小城蒙费朗（Montferrand）合并，形成了今天的克莱蒙费朗。
+              </p>
+              <p>
+                  十九世纪末，安德雷·米其林（André
+                  Michelin）和他的兄弟在此开设了米其林工厂（Michelin），现已发展成为世界500强之一。克莱蒙费朗也是一座综合性的大城市，其市区大致可以分为四部分：东侧为米其林工业园区和机场；中部为主城区，包括西南侧的克莱蒙（Clermont）和东北侧的蒙费朗（Montferrand），两者间为克莱蒙费朗火车站和体育中心；西侧和北侧为分散式居民区；南侧则为大学城和开发区。此外，克莱蒙费朗还是世界著名物理学家帕斯卡的家乡。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                语言文学：
+            </p>
+            <p>
+                对外法语、应用外语、古典文学、现代文学等
+            </p>
+            <p>
+                人文科学：
+            </p>
+            <p>
+                历史、考古史、地理、土地规划与地理、艺术史、哲学、心理学、社会经济媒介、纺织品与地毯艺术
+            </p>
+            <p>
+                运输旅游：
+            </p>
+            <p>
+                销售技术、配送与运输管理、通信的服务与网络、旅游
+            </p>
+            <p>
+                科学技术：
+            </p>
+            <p>
+                数学与计算机在科学中的应用、物质科学、地球与宇宙科学、生命科学、数学在社会科学中的应用、工程师科技、数学、物理、化学、细胞生物与生理学、组织生物学、人口与生态系统、电子与电器自动化技术、计算机、机械、机械与生产工程、自动化系统、热能工程、电子、局域网、工业工程、项目主管、工业系统工程、销售
+            </p>
+            <p>
+                体育：
+            </p>
+            <p>
+                体育科学、体育管理、体育训练
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

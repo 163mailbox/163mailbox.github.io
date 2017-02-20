@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/USE/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/USE/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/USE/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  /*.main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/USE/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/USE/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/USE/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>圣埃蒂安大学</h1>
+              
+              <p>
+                  圣艾蒂安大学也称国立简·莫奈大学，成立于1969年，是法国综合性国立大学之一，位于法国中东部罗纳-阿尔卑斯大区，卢瓦尔省首府，历史文化名城圣埃蒂安。是组成法国名声显赫历史悠久的里昂大学的4所著名的公立大学之一。该大学专业设置齐全，拥有完善的教学研究设施，是一所专业非常全面的大学，在校学生约为18000名，其中8.4%为来自85个国家的留学生。圣艾蒂安大学由5所学院和5所专门学院组成，可在艺术、文学、语言、人文及社会科学、法学、经济与管理、体育、健康、科学与技术学等学科领域提供276项国家文凭。其中的艺术专业是在法国公立大学中比较优秀的。圣艾蒂安大学有5所学院，分别为艺术文学学院、人文社会科学院、法学院、科学技术学院和医学院。还有5所专门学院，2所大学技术学院，1所经济行政管理高等学院，1所圣艾蒂安先进技术高等学院以及一个ROANNE大学中心。近年来，圣艾蒂安大学的国际交流开放、活跃，与中东国家合作进行联合办学。圣艾蒂安市与中国上海是姐妹城市。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 dark_pagi white_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p >
+                  圣艾蒂安市位于法国东南部，在法国罗纳-阿尔卑斯大区，与法国第二大城市里昂毗邻，仅60公里，距巴黎及马赛3小时车程。城市人口约50万人。圣艾蒂安市是法国海拔最高的城市，风光秀丽，古堡林立，气候温和，既有宽厚、亲切的城市性特征，又可享受高品质的自然环境(如毕拉地区自然公园)。圣艾蒂安是法国著名的足球之城，法国足球甲级联赛豪门球队——圣埃蒂安足球俱乐部（ASSE）就位于该市。圣艾蒂安也是法国的一座重工业城市。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p >
+                <strong>专业方向：</strong>
+                <strong></strong>
+            </p>
+            <p >
+                历史、地理、社会学、教育学、传播、
+            </p>
+            <p >
+                经济管理、经济学、社会经济管理、金融、商业、组织管理、人力资源管理、
+            </p>
+            <p>
+                物理测量、机械设置、生物工程学、环境工程、工业改革、
+            </p>
+            <p >
+                数学、语言学、文学、艺术、传媒、科学体育运动、法学、医学、音乐、美术等等专业
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

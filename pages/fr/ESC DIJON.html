@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url("../../images/introduction/ESC DIJON/blur_1.jpg") no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url("../../images/introduction/ESC DIJON/blur_2.jpg") no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url("../../images/introduction/ESC DIJON/blur_3.jpg") no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 400px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ESC DIJON/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ESC DIJON/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ESC DIJON/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>第戎高等商学院</h1>
+              
+              <p>
+                  创办于1900年的布尔格涅高等商学院集团(又名第戎高商；法文惯用缩写"ESC
+                  Dijon")。是法国最早的商学院之一，至今已经有超过100年的历史。学校是创立的初衷是为了给当地的葡萄酒酒庄提供优秀的管理和国际贸易的人才，在之后的时间里，学校慢慢扩展成一所全面的管理学专业学校。学校在近年来不断的发展，在法国商学院排名中的地位也在节节攀升，其最老牌的大学校项目“Grande Ecole
+                  Program”获得了欧洲管理基金会的EPAS认证。学校在2008年和英国的牛津布鲁克斯大学（Oxford Brooks
+                  University）的商学院建立了战略合作关系，在本科，硕士和研究方向全面合作。学校在合作之后开设了本科的法国和英国双学位本科项目和硕士项目，使得双方的学生可以有更广泛的实习和就业的机会。
+              </p>
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  第戎商学院和葡萄酒产业关系紧密，大量的毕业生服务于勃艮第地区的葡萄酒行业，为勃艮第葡萄酒的世界闻名做出了自己的努力。第戎商学院在1988年设立了全球第一个葡萄酒管理培训课程，并且在1991年设立了法语授课的MS CIVS
+                  “葡萄酒与烈酒国际商业硕士”学位，这个项目至今在法国的硕士专业排名“SMBG”葡萄酒类专业排名中位列第一。学校在2009年开设的英语授课MSc Wine
+                  Business“葡萄酒商学院硕士”在当年被“SMBG”评选为年度最佳新创设项目之一。第戎商学院在文化企业管理方面在法国也非常著名，其巴黎校区的法语授课硕士阶段专业MS MECIC“文化企业和创意产业管理”连续多年在
+                  “SMBG”排名中为列法国第一。从第戎商学院“大学校项目”的《审计学》专业毕业的学生，可以免去法国国家《审计和管理》文凭（DSCG）7门考试中的5门，与法国HEC, ESCP, ESSEC,等9所商学院齐名。
+              </p>
+              <p>
+                  第戎高商拥有悠久人文传统，充分领略法国文化精髓，开设多个当今最流行的硕士专业，英法双语教学，从本科到MBA课程齐备，商界就业前景广阔。葡萄酒管理、文化管理、药品产业管理、食品产业管理等等硕士课程，别具法国特色。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 light_pagi white_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  第戎高等商学院集团所在的第戎市(Dijon)位于欧洲中心，从第戎乘坐TVG高速火车至巴黎只需要1小时40分钟(每天16趟往返列车)，至里昂1小时30分，至伦敦和日内瓦3小时。第戎市在生活艺术方面位居法国城市第二，尤其因它的历史遗产、建筑、文化生活和烹调而著名；是"一个生活和学习的好去处"。勃艮第是法国四大美食之都之一，蜗牛菜、芥末、勃艮第牛肉火锅等都是第戎的传统美食，同时第戎附近还是法国勃艮第葡萄酒产区。第戎的是法国东部的重要的经济、文化、交通和教育中心，其综合城市规模在法国排大约第18名。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                硕士优势专业推荐：
+                
+            </p>
+            <p>
+                葡萄酒管理
+                （英）
+            </p>
+            <p>
+                葡萄酒和烈酒国际商务
+                （法）
+            </p>
+            <p>
+                文化企业管理
+                （法）
+            </p>
+            <p>
+                管理学硕士
+                （法、英）：G.E.大学校项目
+            </p>
+
+
+
+          </div>
+        </section>
+</body>
+</html>

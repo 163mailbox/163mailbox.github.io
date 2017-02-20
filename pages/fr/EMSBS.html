@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/EMSBS/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/EMSBS/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/EMSBS/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 500px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  /*.main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/EMSBS/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/EMSBS/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/EMSBS/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>斯特拉斯堡高等商学院</h1>
+              
+              <p>
+                  斯特拉斯堡高等商学院，隶属于法国斯特拉斯堡大学（University of Strasbourg）。成立于1919年，于2007 年与IAE 合并，该商校已经获取 Equis和 AACSB认证，并是欧洲管理发展基金会的成员，既属于公立大学，又属于精英商学院系统。
+                  2014年上海交通大学《世界高校学术排名》中，斯特拉斯堡大学与悉尼大学并列全球第97，2013年EM Strasbourg Business School 在法国高等商学院中排名第12。
+              </p>
+              <p>
+              斯特拉斯堡商学院的大学校硕士项目之一《Audit and Consulting》是法国仅有的9所可以免去7门国家会计和管理文凭考试中5门的商学院之一，和HEC，ESCP齐名。    
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 dark_pagi white_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  斯特拉斯堡 （Strasbourg），法国东北部城市，阿尔萨斯大区（Région
+                  Alsace）的首府和下莱茵省（Bas-Rhin，67省）的省会，也是法国第七大城市和最大的边境城市。市区位于莱茵河西岸，东侧与德国巴登-符腾堡州隔河相望，西侧则为孚日山区。斯特拉斯堡远离海岸线，但仍然受到北大西洋暖流的影响，属于非典型性的温带海洋性气候。
+                  斯特拉斯堡虽然只是法国第七大城市，但是它与日内瓦、纽约以及蒙特利尔一样，是少数几个并非一国首都，却是国际组织总部所在地的城市。斯特拉斯堡地处德法边界，处于欧洲大陆的腹地，与各个方向联系都较为方便。斯特拉斯堡和比利时的首都布鲁塞尔一样，驻有欧洲联盟许多重要的机构，被称为“欧洲第二首都”。
+              </p>
+              <p>
+                  作为世界遗产项目，该市旧城大岛地区众多的中世纪风貌的建筑，小法兰西的沿河风景和独特的木结构建筑，以及著名的圣诞集市（Marché de
+                  Nöel），吸引了来自欧洲各地的众多游客来此观光。而作为欧洲联盟众多机构的所在地，斯特拉斯堡也从中获益匪浅，不仅在城北形成一片新兴的“欧洲区”，而且集中了欧洲各国的美食供人消费。同时，斯特拉斯堡还在音乐和戏剧方面有一些获得国际声誉的机构：斯特拉斯堡爱乐乐团管弦乐队、斯特拉斯堡国家剧院、莱茵省国家歌剧院、斯特拉斯堡打击乐团，每年还举行古典音乐节和现代音乐节。这些节目都是吸引外地游客的亮点。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi dark_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                硕士优势专业推荐：
+                
+            </p>
+            <p>
+                管理学硕士
+                （法、英）：G.E.大学校项目
+            </p>
+            <p>
+                文化产业管理
+                ：和法国排名第二的商学院ESCP相同项目齐名的专业。
+            </p>    
+
+
+          </div>
+        </section>
+</body>
+</html>

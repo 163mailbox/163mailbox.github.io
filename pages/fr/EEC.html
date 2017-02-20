@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/EEC/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/EEC/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/EEC/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/EEC/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/EEC/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/EEC/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi white_bg">
+            <div class="page_container page_right">
+              <h1>埃米尔科尔动漫学院</h1>
+              
+              <p>
+                  埃米尔.科尔( Ecole Emile Cohl) , 创立1984年, 学校位于里昂市中心, 校名源于法国漫画创始人Emile Cohl的姓名。目前是法国仅次于巴黎高布兰图形艺术学院（Paris gobelins），欧洲视觉艺术学院安古兰动画学院（EESI
+                  Angoulême）排名法国第三、欧洲第五的优秀的动漫学院。埃米尔.科尔目前是法国仅有两所可颁发法国国家本科和硕士文凭的动漫学院之一。
+              </p>
+              <p>
+                  学院致力于为绘画，插图，漫画，卡通，网站，互动游戏，电子书籍 等不同艺术领域提供专业人才的培养. 特别是其插图专业声誉在法国屈指可数。2012年9月，应专业人士和机构的强烈呼吁, 埃米尔·科尔( Ecole Emile Cohl) 与世界领先壁画领先者
+                  CitéCréation共同创建了一所专门培养壁画画家的学校: EcohlCité。
+              </p>
+           
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  学院以其严格的教学体制, 人性化的教学理念, 家庭式的教学管理备受业界人士青睐。近年更是因为其毕业生揽获业界各项头奖而使校名声鹤起。
+              </p>
+              <p>
+                  近十年来，埃米尔·柯尔美术学院大学生毕业创作电影正式在法国和国际上参加五十多个电影节巡演 :
+              </p>
+              <p>
+                  - 2010极短片电影节：索宁宁的作品Never again荣获“妇女权利”奖项
+              </p>
+              <p>
+                  - 2011 Canal J 动画希望电影节：马泰·盖亚(Matthieu Gaillard)、吉瑞米·吉特(Jérémy Guiter)和爱莫瑞克·赛杜(Aymeric Seydoux)的作品Jenny 荣获“Espoir du jury”奖项。
+              </p>
+              <p>
+                  - 2012 PIASF电影节：杰非·勒巴尔(Jeffig le Bars) 的作品Carn荣获“Grand Prize”奖项，柯蕾蒙丝·布什侯(Clemence Bouchereau)的作品Aux Gambettes gourmandes荣获“Netizen choicie prize”奖项。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 light_pagi white_bg">
+            <div class="page_container page_left">
+              
+              <p>
+                  里昂市位于法国东南部罗讷河与索恩河交汇处，距巴黎、滑雪场和地中海都只有两个小时的路程。里昂市是法国第二大城市，历史悠久、工商业发达，早期以传统的丝织业著称，绢丝在欧洲市场上享有盛誉。现在里昂已发展成为法国制造、机械、化工、生物、制药、电子、冶金、纺织、食品等行业的重要生产基地，同时也是最为著名的美食城，法国最好的餐厅大都集中于此。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+                <p>
+               优势专业推荐：
+                </p>
+                <p>
+                    插图
+                </p>
+                <p>
+                    漫画
+                </p>
+                <p>
+                    动画
+                </p>
+                <p>
+                    多媒体
+                </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

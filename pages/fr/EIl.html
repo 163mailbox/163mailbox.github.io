@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/EIl/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/EIl/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/EIl/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  /*.main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/EIl/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/EIl/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/EIl/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>巴黎视觉传达设计学院</h1>
+              
+              <p>
+                  巴黎视觉传达高等艺术学院坐落于巴黎市15区，与埃菲尔铁塔毗邻，学院的后街是巴黎著名的时装艺术一条街，几乎每个周末这里都有各种形式的艺术表演：滑稽剧、流行音乐、各种艺术展、时装发布会等等，周边环境为本院学生提供了接触和融入法国文化的平台。巴黎视觉传达高等艺术学院隶属于法国文化部的高等艺术学院。作为巴黎最著名的艺术和视觉传达学校之一，在广告设计、平面编辑、图像处理、视觉构图、包装设计、多媒体设计、动画设计等领域具有极高的声誉，学校有权颁发法国国家文化部承认的学士和硕士学位，并得到CNCP(全国委员会专业认证)认可。2009年，学校在法国艺术设计和传播类高等艺术学院排名第二；2010年，学校在法国艺术设计和传播类高等艺术学院排名第一。
+              </p>
+              <p>
+                  学院与广告设计公司及专业机构保持密切联系，确保教学项目与市场紧密结合，为此，学院每年还组织各种形式的艺术活动，还有远足和学习之旅。该校学生的作品多次获得法国创意锦标赛大奖。近800个法国企业和外国企业与学院建立了良好的合作关系。学院同时设有为学生提供实习与工作信息的部门。学院毕业生成为很多著名创意与设计公司的中坚力量。
+              </p>
+              <p>
+                  学校合作院校：加拿大魁北克拉瓦尔大学，美国萨瓦那艺术设计学院，智利美耶大学等十几所专业艺术院校与机构。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 light_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+            <p>
+                <strong>巴黎：</strong>
+                法国最大城市，欧洲第二大城市，法国的政治、经济、文化、商业中心，是世界四大国际化都市之一。巴黎位于法国北部巴黎盆地的中央，横跨塞纳河两岸。巴黎建都已有1400多年的历史，它不仅是法国，也是西欧的一个政治、经济和文化中心，巴黎香水有“梦幻工业”之称。巴黎是历史之城、美食之都和创作重镇。巴黎是著名的世界艺术之都，印象派美术发源地，芭蕾舞的诞生地，欧洲启蒙思想运动中心，电影的故乡，现代奥林匹克运动会创始地。巴黎又是世界公认的文化之都，大量的科学机构、研究院、图书馆、博物馆、电影院、剧院、音乐厅分布于全市的各个角落。
+            </p>
+            <p>
+                <strong>艾克斯：</strong>
+                Aix-en-Provence是法国普罗旺斯-阿尔卑斯-蓝色海岸罗讷河口省的一座城市，Aix-en-Provence是普罗旺斯的前首府，这座拥有林荫大道、喷泉、华宅的中世纪古城，是普罗旺斯最具有“都会”风情的地区，因为从12世纪开始，艾克斯就是普罗旺斯文化、经济、知识中心，同时，也是天才画家塞尚的故乡。
+            </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                优势专业推荐：
+            </p>
+            <p>
+                平面设计
+            </p>
+            <p>
+                广告设计
+            </p>
+            <p>
+                动画设计
+            </p>
+            <p>
+                包装设计
+            </p>
+            <p>
+                多媒体设计
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

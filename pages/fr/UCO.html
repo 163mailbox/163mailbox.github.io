@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/UCO/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/UCO/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/UCO/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  /*.main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  /*.main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/UCO/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/UCO/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/UCO/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>昂热西部天主教大学</h1>
+              
+              <p>
+                  西部天主教大学(法文惯用缩写“UCO”)创办于1875年，是一所多学科综合大学，提供可授予国家文凭和大学校颁文凭的各类教育课程。西部天主教大学共有三个校园(包括：昂杰主校园、瓦纳/阿拉东[Vannes/Aradon]和甘冈[Guingamp])，总计招生9
+                  000多人，共有教师400名。国际语言中心CIDF隶属昂热西天主教大学，已有多年法语教学历史，每年招收约1200名外国学生，分别来自50个不同的国家。该校语言中心曾经是欧洲王室指定王室成员法语学习学院。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 light_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  位于法国西北部昂热市，昂热是一个现代化的城市，但仍保留着丰富的历史遗迹，人与人之间既友善又活泼，那里的气氛会把你深深迷恋。从昂热到大西洋只需20分钟，海边沙滩美景就会呈现眼前。她的地理位置得天独厚，飞机铁路交接，往来欧洲各大城市，搭乘飞机半小时内即可到达，各大著名城市如：巴塞罗纳、米兰、伦敦、柏林…欧洲的绚丽姿彩正等待着你去欣赏！该市距离巴黎1小时车程，市内居民约25万人。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                <strong>应用语言系：</strong>
+            </p>
+            <p>
+                英语，德语，西班牙语，国际企业关系，会议翻译，跨文化语言学
+            </p>
+            <p>
+                <strong>社会科学应用系：</strong>
+            </p>
+            <p>
+                心理学，教育心理学，组织行为学，企业人力资源管理，企业管理心理学
+            </p>
+            <p>
+                <strong>交流，传播科学系：</strong>
+                <strong></strong>
+            </p>
+            <p>
+                信息传播学，教育科学，因特网传播
+            </p>
+            <p>
+                <strong>艺术，文学，历史系：</strong>
+            </p>
+            <p>
+                历史，现代，古典文学，音乐，信息和档案学， 文化媒体
+            </p>
+            <p>
+                <strong>高等职业学院（只提供第一阶段教育）：</strong>
+                <strong></strong>
+            </p>
+            <p>
+                历史
+                DEUG
+            </p>
+            <p>
+                <strong>数学系：</strong>
+            </p>
+            <p>
+                信息和应用科学DEUG
+            </p>
+            <p>
+                <strong>应用数学系：</strong>
+                <strong></strong>
+            </p>
+            <p>
+                应用数学，信息科学
+            </p>
+            <p>
+                <strong>应用生物学系：</strong>
+            </p>
+            <p>
+                可再生自然资源管理，基因生态学，废物废品管理和处理，水土处理和管理，生物工程
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

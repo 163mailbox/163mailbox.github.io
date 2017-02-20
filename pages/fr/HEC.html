@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/HEC/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/HEC/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/HEC/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page1 .page_container{
+    top:12%;
+  }
+  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      /*font-size: 20px;*/
+      margin-bottom: 5px;
+  }
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/HEC/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/HEC/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/HEC/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>巴黎高等商学院</h1>
+              
+              <p>
+                  巴黎高等商学院(HEC Paris), 简称“巴黎高商” 或“HEC商学院”，由巴黎工商会于1881年创立，是法国最负盛名的高等商业管理学院，也是欧洲最著名的商学院之一。HEC商学院国际排名领先，连续第8年被评为欧洲第一商学院（《金融时报》（Financial
+                  Times）2013年商学院排名）；MBA专业排名世界第4 （《经济学人》2014年MBA排名）；EMBA专业排名世界第1（《金融时报》2015年排名）；管理学硕士项目（Master in Management）全球排名第2（《金融时报》2014年全球管理学硕士排名）。HEC商学院设有管理学硕士(Grand
+                  Écoleé/MSc in Management)、工商管理硕士（MBA）、高级管理人员工商管理硕士(EMBA)和博士学位（PhD）等教学项目。在法国本土，巴黎HEC商学院是第一个获得“国际高等商学院联合会”、“欧洲质量发展认证体系”以及“英国工商管理硕士协会”三大权威国际认证的商学院。
+              </p>
+              <p>
+                  商学院排名：《观点》(Le Point)杂志及《费加罗》(Le Figaro)，稳居法国商学院排名第1
+              </p>
+              <p>
+                  工商管理硕士（MBA）排名： 《经济学人》（The Economist）世界排名第4（2014年）
+              </p>
+              
+             
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  管理学理学硕士(Grand Écoleé/MSc in Management)排名: 《金融时报》世界排名第2 (2014)
+              </p>
+              <p>
+                  金融硕士（Masters in Finance Pre-experience）排名：《金融时报》世界排名第1 (2014)
+              </p>
+                 <p>
+                  高级管理人员工商管理硕士(EMBA)排名：《金融时报》世界排名第1 (2014)
+              </p>
+              <p>
+                  高级经理培训（Executive Education - Customised）排名：《金融时报》世界排名第2
+              </p>
+              <p>
+                  开放式注册课程培训（Executive Education - Open）排名：《金融时报》世界排名第3
+              </p>
+              <p>
+                  巴黎高等商学院的管理学硕士项目以竞争极其激烈的入学考试（法语称作concours）著称。报考管理学硕士的学生，须学习2年的预备课程，然后通过统考方能入学。每年约有9500名学生报名参加入学考试，但最终仅有4%的学生得以录取。
+              </p>
+              <p>
+                  
+              </p>
+              <p>
+                  HEC商学院拥有诸多杰出校友，包含多位世界500强企业CEO及政界精英：Jean-Paul Agon （欧莱雅集团CEO), François-Henri Pinault（开云集团（Kering）创始人兼CEO），Henri Lachmann (施耐德CEO), Stéphane Richard
+                  (法国电信CEO), Henri de Castries (安盛CEO), Baudouin Prot (法国巴黎银行CEO), François Hollande（现任法国总统），Pascal Lamy（世界贸易组织（WTO）总干事）等。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 light_pagi white_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+              巴黎高等商学院位于巴黎南郊凡尔赛宫附近的Jouy-en-Josas市镇，距离巴黎市中心约20公里，搭乘市郊地铁(RER)C线仅需45分钟即可到达市区；学校提供每日定时班车往返市中心。巴黎高等商学院占地340亩，学校拥有湖区、树林与多个运动场，景色秀美。    
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                硕士优势专业推荐：
+                
+            </p>
+            <p>
+                管理学硕士
+                （法、英）：G.E.大学校项目
+            </p>
+            <p>
+                管理学与商业法
+                （法、英）：G.E.大学校项目
+            </p>
+            <p>
+                管理学与公共事务
+                （法、英）：G.E.大学校项目
+            </p>
+            <p>
+                一年制专业硕士课程：
+                
+            </p>
+            <p>
+                英语授课：国际贸易、国际金融、管理与金融经济学、市场营销、战略管理、可持续发展与社会创新
+            </p>
+            <p>
+                法语授课：法律与国际管理、创业学、大项目管理、媒体艺术与创新
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

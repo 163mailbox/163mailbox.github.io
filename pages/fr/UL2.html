@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/UL2/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/UL2/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/UL2/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+/*  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  /*.main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/UL2/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/UL2/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/UL2/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>里昂二大</h1>
+              
+              <p>
+                  卢密耶－里昂第二大学 (简称里昂第二大学)
+                  的前身为创办于1896年的里昂大学，1968年里昂大学分裂为三所大学，里昂二大是其中一个部分，当时主要涵盖法学、文学和社会科学科系。从1973起改为现行建制。里昂二大是一个以人文科学、社会科学和经济管理科学为主的大学，教学质量非常出色，学校下设6个学院、5个专门学院、4所大学职业学院、1所大学技术学院和1所政治学院。拥有约30000名学生。校区面积61000平米。提供近300种学科文凭，设有文学、艺术和语言学、外语、地理、艺术、历史、旅游、法律、人类和社会学，经济管理学等专业。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  里昂市位于法国东南部罗讷河与索恩河交汇处，里昂第二大学（里昂二大）位于法国第二大工业城市里昂，是法国主要工业中心之一，距巴黎、滑雪场和地中海都只有两个小时的路程。里昂市是法国第二大城市，历史悠久、工商业发达，早期以传统的丝织业著称，绢丝在欧洲市场上享有盛誉。现在里昂已发展成为法国制造、机械、化工、生物、制药、电子、冶金、纺织、食品等行业的重要生产基地，同时也是最为著名的美食城，法国最好的餐厅大都集中于此。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi dark_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                <strong>本科阶段：</strong>
+                应用外语、语言学、戏剧艺术：电影与视听研究、戏剧艺术：戏剧研究、信息-传播、古典文学、现代文学、音乐、心理学、认知学、集体主持音乐指导、电子传播、纺织服装-色彩图文设计师与工业造型师、社会科学及其环境人口学、地理、历史、艺术史与考古、教育学、政治学、社会学、土地规划：城市外围空间、社会经济与行政管理、经济与管理学、组织管理：统计研究、工业流程组织与改善项目管理、人力资源管理合作者、农业与环境：农业活动环境管理、金融运作管理、银行、农业与农产食品企业法律与管理、物流、组织管理：客户联系中心操作管理等
+            </p>
+            <p>
+                <strong>硕士阶段：</strong>
+                人文科学 艺术
+                音乐与音乐学、电影与视听研究、戏剧研究、信息与传播、法国语言与文学、法语语言与文学、古代社会语言文学与文化、语言学、对外法语与第二外语教学法、外国语言与文化、应用外语、词汇学与术语学，多语，翻译、国际贸易与应用语言、健康学中的国际传播、外国语言与文化、翻译，语言与文学、外国语言与信息与传播技术教学法、调停：互动，符号学与多媒体、影视艺术传播、网络传播编辑管理、组织传播、人道主义援助、服装设计、文学在职业编辑中的应用、心理学、临床健康发展心理学、认知心理学、病理心理学与临床心理学、工作与社会联系心理学、健康、老年与残疾临床心理学、劳动与社会联系心理学、社会认知发展与跨文化实践心理学、神经心理学、认知学、认知心理学：应用认知学等
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

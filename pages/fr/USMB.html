@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/USMB/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/USMB/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/USMB/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+/*  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  /*.main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/USMB/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/USMB/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/USMB/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>萨瓦大学</h1>
+              
+              <p >
+                  法国萨瓦大学是一所国立综合性大学，成立于1945年，经过六十多年的发展，萨瓦大学已经形成一所拥有七所学院，37个国家级研究所，40多个硕士学位和博士学位授予点的综合性大学。萨瓦大学目前有在校学生约13000人，有550名教授，其中380名研究级教师。58%在校生在大学第一阶段（大专）学习，34%在校生在大学第
+                  二阶段（本科、硕士）学习，6%在校生在大学第三阶段（博士）学习。萨瓦大学语言中心为即将进入萨瓦大学及法
+                  国大学攻读专业的外国学生提供高质量，强化的语言培训，学校有来自欧洲各国的学生，其中有来自87个不同国家的900名外国学生。萨瓦大学分有三个校区，分别坐落在尚贝里(Chambéry)、安纳西(Annecy)和伯基湖(Bourget-du-Lac)。
+              </p>
+              <p >
+                  萨瓦大学语言中心：是法国国家级法语DELF和DALF考试中心，同时可以颁发萨瓦大学法语学习文凭(DU)和巴黎工商会法语文凭(CCIP)。申请就读该校的中国学生将首先在该中心学习一年法语，通过考试后可根据个人志愿进入专业学习或报读其它院校。外国学生开学第一天进行口试和笔试，然后根据学生的水平编班。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 light_pagi white_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  尚贝里(Chambéry)：法国东南部城市，萨瓦省首府。东面紧邻意大利和瑞士，是法国最有名的旅游城市之一。在阿尔卑斯山脉西侧的山谷间，布尔热湖以南，紧邻布尔歇湖。人口约9万（1982）。公路中心和铁路枢纽。工业有食品、炼铝、服装、制鞋、建筑材料、化学等部门。有建于十五世纪的大教堂。尚贝里是一个充满艺术氛围并且历史悠久的城市,他在阿尔卑斯山脉的环抱中，古堡林立，气候宜人、风景优美。春秋平均气温10-20度，夏季20-30度，冬季0-10度。
+              </p>
+              <p>
+                  安纳西(Annecy)：为法国东南部小城，位于罗纳-阿尔卑斯（Rhone
+                  Alpes)大区的上萨瓦省(Haute-Savoie），安纳西位于日内瓦与尚贝里（Chambery）之间，日内瓦(Geneva）以南35千米。安纳西地区有十三个自治市，是其管辖的三个行政区的首府。创立于1960年的安纳西国际动画节电影节（the Annecy International Animated
+                  Film Festival）是目前世界上规模最大、水准最高的国际动画节，享有“动画奥斯卡”的美誉。
+              </p>
+              <p >
+                  安纳西地区有萨瓦理工大学（Polytech'Savoie），萨瓦大学(Université de Savoie-Chambéry-Annecy)。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p >
+                <strong>专业方向：</strong>
+                <strong></strong>
+            </p>
+            <p >
+                经济和社会管理、法律、经济管理、历史、地理、哲学、心理学、社会学、文化媒介和沟通、应用外语、现代文学、科学技术、应用数学和社会学、材料学 、应用数学，应用计算机、工程师科学技术专业
+                :系统工程和程序工程、地球学和宇宙学、生命学、体育运动科学技术、公共管理、经济学、法律、法国法律和瑞士法律（双重学位）、经济社会管理、农艺学、体育产品和服务商品化、工业设计和生产、工业改革和发展、测量和网络、新鲜产品物流和商品化、组织管理 专业：企业计算机和多媒体管理、机电、塑料加工和合成材料、工业生产
+                专业数控车削、产品质量和程序质量、化学、电子，电子学和自动化、计算机、数学、应用数学和社会学、物理、地球学、机械学、体育运动科学技术、法律、管理学、经济学、对外法语、机械技术、旅游、酒店、娱乐 、材料工程等。
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

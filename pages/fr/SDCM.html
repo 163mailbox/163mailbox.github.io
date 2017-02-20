@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/SDCM/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/SDCM/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/SDCM/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 400px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/SDCM/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/SDCM/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/SDCM/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>蒙彼利埃高商</h1>
+              
+              <p>
+                  蒙彼利埃高等商学院成立于1879年，其宗旨是培养具有战略和操作能力并能满足国际商务环境下企业要求的未来企业经理和企业创办人。学校的管理学硕士项目（Master in Management）在2014年Financial
+                  Times的全球管理学硕士排名中列32位。蒙彼利埃高商已获得商学院AACSB/AMBA两大认证，法国商学院排名16，欧洲商学院排名68，管理学硕士排名49。位于法国南部，是有名的大学城。学院位于蒙彼利埃市中心。蒙彼利埃是法国重要的教育与研究中心之一（有3所大学、6所高等专业学院、6万名大学生和8000名研究员）。学院濒临地中海，享有一种得天独厚的环境。
+              </p>
+              <p>
+                  蒙彼利埃高等商学院提供管理、商务及企业经营学科领域的全科教育课程，并设有配套职业化专业课程；课程教学具有明显的国际化特征（所有学生都须在国外完成一年学业）。
+                </p>
+
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>学院拥有“组织机构与管理研究中心（CEROM）”研究实验室；该研究中心联合蒙彼利埃高等商学院集团旗下的所有教师－研究员围绕有关企业的重大国际性主题展开研究，并与法国及国外大学的研究团队保持密切合作。学院为学生提供众多的服务与设施，学生可利用一个赫兹网免费进入无线互联网及内部网，享受各种服务，其中包括一个拥有4000种法文及英文专著的在线图书馆。此外，学院在住房、餐饮及社团生活方面设立了许多机构，以便为接待学生创造最佳物质条件。一个由学生主持并在整个夏天运作的住房服务处可为新生寻找住房提供帮助。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p >
+                  蒙彼利埃（Montpellier），法国南部城市，地中海沿岸，朗格多克-鲁西永大区（Région de
+                  Languedoc-Rossillon）的首府和埃罗省（Hérault，34省）的省会，是法国第八大城市，也是法国南部重要的工商业中心。蒙彼利埃属于典型的地中海气候，全年温暖且日照充足，几乎没有冰雪天气，是法国的避寒圣地，被称为“阳光之城”。蒙彼利埃还是法国著名的大学城。
+              </p>
+              <p >
+                  蒙彼利埃位于地中海经济线上，法国南部地中海沿海平原的朗格多克葡萄酒产区，历来就是一个酒类贸易中心。传统的工业有食品、纺织、蜡烛、肥皂、香料和化学品。1956年建于该市的玛科纳原子能发电站，在法国久负盛名。二十世纪末，美国IBM电子计算机公司在该市投资建厂，成为了蒙彼利埃提供职位数量最多的私营企业，也使得蒙彼利埃的现代化工业进一步发展。
+              </p>
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                学士优势专业推荐：
+            </p>
+            <p>
+                BBA工商管理
+            </p><br>
+            <p>
+                硕士优势专业推荐：
+            </p>
+            <p>
+                管理学硕士
+                G.E.大学校项目
+            </p>
+            <p>
+                MSC
+                一年制硕士：
+            </p>
+            <p>
+                国际商务；
+            </p>
+            <p>
+                工商管理；
+            </p>
+            <p>
+                市场营销；
+            </p>
+            <p>
+                全球商务；
+            </p>
+            <p>
+                金融
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

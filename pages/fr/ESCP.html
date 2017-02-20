@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/ESCP/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/ESCP/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ESCP/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  /*.main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ESCP/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ESCP/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ESCP/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>欧洲管理学院</h1>
+              
+              <p>
+                  ESCP，欧洲高等商学院隶属于巴黎工商会(CCIP)，建立于1891年，是世界上最古老的商学院，被认为是欧洲最顶尖的商学院之一，与HEC和ESSEC 并称巴黎三大商学院的欧洲顶级商校，ESCP
+                  同时获得了EQUIS，AMBA，AACSB的三项认证。是全球少数受到三大商学院认证机构（EQUIS、AACSB、AMBA）认证的学院之一。该校培养和教育了一代又一代各界领导人和前沿思想家。其管理硕士专业Master in Management，2015年被金融时报评为全球第三位，金融硕士专业 Master
+                  in Finance，2015年被金融时报评为全球第三，其Executive MBA同时排名十三位。
+              </p>
+              <p>
+                  ESCP在欧洲拥有六个校区，她也是唯一一所在欧洲各地拥有自己独立校区和系统的学校，分别位于法国巴黎，英国伦敦，德国柏林，意大利都灵，西班牙马德里和波兰华沙，每个校区均参与所在国家排名。在法国，ESCP整体排名第三，其国际化水平排名第一。
+                </p>
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              
+                <p>
+                  其管理硕士专业Master in
+                  Management在英国排名第二，西班牙排名第一，德国排名第一，意大利排名第一，波兰排名第一。正因为具有的这种特质，为其学生提供了独特的商学教育形式和全球视野。
+              </p>
+              <p>
+                  ESCP学校巴黎校区位于巴黎市11区，共和国大道，所处地理位置优越，同时也是唯一一所位于巴黎市内的著名商校。学校在欧洲其余校区也均位于中心地段，为在校学生提供了一个绝佳的了解当地的机会。每年，有来自世界90多个国家的4000多名学生和5000多名企业管理者来到ESCP。学校为他们提供了各种类型的管理课程。学校拥有200多个不同国籍，活跃在世界150个国家和地区的，超过40，000名校友。同时，学校和国内和国际企业都建立了长期的合作关系，这种网络关系是ESCP欧洲高等商学院的毕业生在未来的事业发展中具有一个全球性的优势。ESCP
+                  大多数学生在毕业之前就能够得到在市场，金融，咨询业公司的重要职位，其毕业生薪水一直处于所有商学院的最顶端。学校为学生提供了各种类型的综合管理课程和其他特别项目。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 light_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  巴黎，法国最大城市，欧洲第二大城市，法国的政治、经济、文化、商业中心，是世界四大国际化都市之一。巴黎位于法国北部巴黎盆地的中央，横跨塞纳河两岸。巴黎建都已有1400多年的历史，它不仅是法国，也是西欧的一个政治、经济和文化中心，巴黎香水有“梦幻工业”之称。巴黎是历史之城、美食之都和创作重镇。巴黎是著名的世界艺术之都，印象派美术发源地，芭蕾舞的诞生地，欧洲启蒙思想运动中心，电影的故乡，现代奥林匹克运动会创始地。巴黎又是世界公认的文化之都，大量的科学机构、研究院、图书馆、博物馆、电影院、剧院、音乐厅分布于全市的各个角落。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                硕士优势专业推荐：
+            </p>
+            <p>
+                管理学硕士
+                （法、英）：G.E.大学校项目
+            </p>
+            <p>
+                数字媒体和营销（英）；市场营销和创意（英）；市场营销和传播（英）
+            </p>
+            <p>
+                国际可持续管理（英）；国际销售管理（英）；国际食品和饮料管理（英）
+            </p>
+            <p>
+                欧洲商务（英）；商业计划管理（英）；能源管理（英）
+            </p>
+            <p>
+                国际项目管理（英法）；国际财富管理（英法）；生物医药管理（英法）
+            </p>
+            <p>
+                文化和艺术活动管理（英法）；数字出版管理（英法）；媒体管理（英法）；
+            </p>
+            <p>
+                创新和创业（英法）；战略和组织机构咨询（英法）；审计和咨询（英法）；
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

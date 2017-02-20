@@ -1,12 +1,503 @@
 <!DOCTYPE html>
+<!--
+Template Name: Colossus
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
 <html>
 <head>
-<title>Page Title</title>
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+
+
+
+<link rel="manifest" href="images/icon/manifest.json">
+<meta name="google-site-verification" content="DlxkGHd7X1kyaQFce34if6ToUyx8ytcpQF4vuEhbmH8" />
+<title>FE留学网</title>
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="layout/styles/owl.theme.css">
+<link rel="stylesheet" href="layout/styles/owl.carousel.css">
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="layout/scripts/jquery.flexslider-min.js"></script>
+<script src="layout/scripts/owl.carousel.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87774263-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+
+    $("#response").owlCarousel({
+      autoPlay: 5000,
+      items : 1,
+    });
+
+
+
+
+    $(".row3 .group .three_fifth #DAP").show().css({'right': '-30px','opacity': '1'});
+    $(".row3 .group .titles li").click(function(){
+      var theID=$(this).attr("id");
+      var activeID=$("div .titles").find(".active").attr("id");
+      $(".row3 .group .three_fifth #"+activeID).animate({
+        'opacity': '0', 'right': '0'
+      },200, function(){
+        $(this).hide(0,function(){
+          $(".row3 .group .three_fifth #"+theID).show().animate({
+            'opacity': '1','right': '-30'
+          },200)
+        });
+      });
+      $(this).siblings().removeClass("active");
+
+      $(this).addClass("active");
+    });
+  });
+
+</script>
+
+
 </head>
-<body>
+<body id="top">
+<div class="wrapper row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><img src="images/logo.jpg"style="width:40px;height:40px;" ><a href="index.html">FE留学</a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="index.html">首页</a></li>
+        <li><a href="pages/fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+          </ul> -->
+        </li>
+        <li><a href="pages/es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="forum.html">留学论坛</a></li>
+        <li><a href="contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
 
+
+
+
+
+<div class="wrapper">
+  <div id="slider" class="clear"> 
+    <div class="flexslider basicslider">
+      <ul class="slides">
+        <li><img src="images/demo/slides/fe_bk_brdk.jpg" alt="">
+          <div class="txtoverlay">
+            <div class="centralise">
+              <div class="verticalwrap">
+                <article>
+                  <h2 class="heading uppercase">France & España<br>法国 & 西班牙</h2>
+                  <p style="color:white;">FE留学网，专注法国、西班牙留学的微互联平台</p>
+                  <!-- <p><a class="btn orange pushright" href="#">Leo facilisis odio</a> <a class="btn red" href="#">Quis mollis nibh dolor</a></p> -->
+                </article>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><img src="images/demo/slides/fr.jpg" alt="">
+          <div class="txtoverlay"onclick="location.href='pages/fr_main.html';" cursor: pointer; cursor: hand;>
+            <div class="centralise">
+              <div class="verticalwrap">
+                <article>
+                  <h2 class="heading uppercase"></h2>
+                </article>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><img src="images/demo/slides/open_school.jpg" alt="">
+          <div class="txtoverlay" onclick="location.href='pages/es/upvlogo.html';" cursor: pointer; cursor: hand;>
+            <div class="centralise">
+              <div class="verticalwrap">
+                <article>
+                  <h2 class="heading uppercase">开学季</h2>
+                  <p style="color:white;">西班牙瓦伦西亚理工大学</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="wrapper row2">
+  <div id="services" class="clear"> 
+    <div class="group">
+      <div class="one_third first">
+        <article class="service"><i class="icon red circle fa fa-bell-o"></i>
+          <h2 class="heading">Français 法语授课</h2>
+          <p class="btmspace-10">
+            -第二大国际官方通用语言<br>
+            -联合国六大官方语言之一<br>
+            -联合国第一书写语言<br>
+            -双语/多语人才优势
+          </p>
+          <p><a href="pages/fr_main.html?type=public">院校推荐 &raquo;</a></p>
+        </article>
+      </div>
+      <div class="one_third">
+        <article class="service"><i class="icon orange circle fa fa-bicycle"></i>
+          <h2 class="heading">Español 西语授课</h2>
+          <p class="btmspace-10">
+            -世界第二大语言<br>
+            -联合国六大官方语言之一<br>
+            -双语/多语人才优势
+          </p>
+          <p><a href="pages/es_main.html">院校推荐 &raquo;</a></p>
+        </article>
+      </div>
+      <div class="one_third">
+        <article class="service"><i class="icon green circle fa fa-mortar-board"></i>
+          <h2 class="heading">English 英语授课</h2>
+          <p class="btmspace-10">
+              -外语只想学一门！<br>
+              -雅思、托福的性价比选择<br>
+              -文凭国际认证
+            </p>
+          <p><a href="pages/fr_main.html?type=business">法国院校推荐 &raquo;</a></p>
+          <p><a href="pages/es_main.html">西班牙院校推荐 &raquo;</a></p>
+        </article>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="wrapper row2">
+  <div class="latest"> 
+    <ul class="nospace group">
+      <li>
+        <figure><a class="imgp" href="workflow.html"><img src="images/demo/latest/1.jpg" alt=""><p class="front">择校评估</p></a>
+          
+        </figure>
+        <figcaption class="inspace-30 center">
+            <p class="bold uppercase">择校评估</p>
+            <p><a href="workflow.html">了解更多 &raquo;</a></p>
+          </figcaption>
+      </li>
+      <li>
+        <figure><a class="imgp" href="workflow.html"><img src="images/demo/latest/2.jpg" alt=""><p class="front">材料准备</p></a>
+          
+        </figure>
+        <figcaption class="inspace-30 center">
+            <p class="bold uppercase">材料准备</p>
+            <p><a href="workflow.html">了解更多 &raquo;</a></p>
+          </figcaption>
+      </li>
+      <li>
+        <figure><a class="imgp" href="workflow.html"><img src="images/demo/latest/3.jpg" alt=""><p class="front">申请专业</p></a>
+        </figure>
+          <figcaption class="inspace-30 center">
+            <p class="bold uppercase">申请专业</p>
+            <p><a href="workflow.html">了解更多 &raquo;</a></p>
+          </figcaption>
+      </li>
+      <li>
+        <figure><a class="imgp" href="workflow.html"><img src="images/demo/latest/4.jpg" alt=""><p class="front">签证辅导</p></a>
+        </figure>
+          <figcaption class="inspace-30 center">
+            <p class="bold uppercase">签证辅导</p>
+            <p><a href="workflow.html">了解更多 &raquo;</a></p>
+          </figcaption>
+      </li>
+      <li>
+        <figure><a class="imgp" href="workflow.html"><img src="images/demo/latest/5.jpg" alt=""><p class="front">境外服务</p></a>
+        </figure>
+          <figcaption class="inspace-30 center">
+            <p class="bold uppercase">境外服务</p>
+            <p><a href="workflow.html">了解更多 &raquo;</a></p>
+          </figcaption>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="wrapper row3 ">
+  <main class="container nospace clear "> 
+    <div class="group btmspace-50">
+      <div class="two_fifth first titles">
+        <h2 class="heading btmspace-30">热门项目</h2>
+        <ul class="nospace group">
+          <li class="btmspace-15 hot active" id="DAP">
+            <h6 class="heading"><img src="images/franceflag.png"> DAP et HORS-DAP 公立大学专业直录项目</h6>
+          </li>
+          <li class="btmspace-15 hot" id="SAI">
+            <h6 class="heading"><img src="images/franceflag.png">  SAI 五大高商联合招生项目</h6>
+          </li>
+          <li class="btmspace-15 hot" id="WAL">
+            <h6 class="heading"><img src="images/spainflag.png">  瓦伦西亚理工大学预科项目</h6>
+          </li>
+          <li class="btmspace-15 hot" id="PAS">
+              <h6 class="heading"><img src="images/franceflag.png">  Password 商学院联盟项目</h6>
+          </li>
+          <li class="btmspace-15 hot" id="NPI">
+              <h6 class="heading"><img src="images/franceflag.png">  N+I 工程师联合招生项目</h6>
+          </li>
+          <li class="btmspace-15 hot" id="KAS">
+              <h6 class="heading"><img src="images/spainflag.png">  卡斯蒂利亚拉曼恰大学预科项目</h6>
+          </li>
+          <li class="btmspace-15 hot" id="POL">
+              <h6 class="heading"><img src="images/franceflag.png">  Polytech 综合理工院校联盟项目</h6>
+          </li>
+          <li class="btmspace-15 hot" id="CEL">
+              <h6 class="heading"><img src="images/franceflag.png"> CELA免面签项目</h6>
+          </li>
+        </ul>
+      </div>
+      <div class="three_fifth btmspace-30">
+        <div class="details inspace-15" id="DAP">
+          <h1>DAP et HORS-DAP 公立大学专业直录项目</h1>
+          <p>DAP（la Demande d'Admission Pr&eacute;alable）</p>
+          <p>DAP面向已经很好地掌握了法语的学生，以便在法国能够直接参加法语授课的课程，而不进行语言阶段的学习。申请大学第一阶段的预注册证明。</p>
+          <p>HORS-DAP</p>
+          <p>非DAP程序面向已经具备一定法语水平，无需参加前期语言学习可直接进入专业学习的学生，申请学士二、三年级，硕士一、二年级。</p>
+        </div>
+        <div class="details inspace-15" id="SAI">
+          <h1>SAI 五大高商联合招生项目</h1>
+          <p>SAI（Service des Admissions Internationales）</p>
+          <p>通过SAI项目递材料与面试，学生可同时申请项目内的全部五所学校，被录取后，直接进入学校专业学习。</p>
+          <p>SAI项目下的五所高商分别是：</p>
+          <ul>
+          <li>HEC Paris（巴黎高等商学院）</li>
+          <li>ESCP Europe（欧洲高等商学院）</li>
+          <li>EMLYON Business School（里昂商学院）</li>
+          <li>AUDENCIA Nantes（南特经济管理学院）</li>
+          <li>SKEMA Business School（尼斯-里尔商学院）</li>
+          </ul>
+          <p><strong>HEC</strong><strong>高等商学院</strong>国际排名领先，连续第8年被评为欧洲第一商学院。MBA 专业排名世界第4 ；管理学硕士项目（Master in Management）全球排名第2，全法排名第1。</p>
+          <p><strong>ESCP</strong><strong>欧洲管理学院</strong>是世界上的第一所商学院，全法排名第三位。其管理硕士专业 Master in Management，2015年被金融时报评为全球第3位，金融硕士专业 Master in Finance，2015年被金融时报评为全球第3。 全法排名2-3（与ESSEC基本不相上下）。</p>
+          <p><strong>EMLYON </strong><strong>里昂商学院</strong>是欧洲十大名牌商学院，全法排名第四。金融专业和生产管理专业在法国排名前3。除此之外，它还有法国排名第一的管理信息系统专业。</p>
+          <p><strong>SKEMA</strong><strong>商学院</strong>是法国目前规模最大的商学院之一，全法排名8-10。全球共有六大校区，法国巴黎、里尔、索菲亚 &middot;安提波利斯，美国罗利、中国苏州和巴西贝洛。它的金融硕士排名全球第6位,管理学硕士排名全球第25位。</p>
+          <p><strong>Audencia</strong><strong>南特经济管理学校院</strong>是一家致力于高等教育及研究的机构，全法排名6-8。Audencia是第一家签署联合国全球契约的法国管理学院。它的管理学硕士项目（Master in Management）在Financial Times的全球管理学硕士排名中列第27位。</p>
+        </div>
+        <div class="details inspace-15" id="WAL">
+          <h1>瓦伦西亚理工大学预科项目</h1>
+          <p>瓦伦西亚理工大学是西班牙数一数二的理工大学，位于西班牙瓦伦西亚省，西班牙第三大城市：瓦伦西亚。学校有三个校区，分别在：Valencia市，Gandia市，Alicante市。
+          </p>
+          <p>签证阶段，学校为学生提供语言课程通知书和专业预录取通知书，为学生签证提供了双重保障。学生通过签证之后，可到学校读9个月或7个月语言加强课程，同时可选择文、理两个方向，学习专业预科。语言预科阶段结束后，学生通过语言考试，我们会继续负责学生的大学本科或研究生专业申请。</p>
+        </div>
+        <div class="details inspace-15" id="PAS">
+          <h1>Password 商学院联盟项目</h1>
+          <p>申请该项目的学生可以同时申请参加以下高等商学院的选拔考试：</p>
+          <ul>
+          <li>第戎-勃艮第高等商业学校（ESC-Dijon）</li>
+          <li>格勒诺布尔高等商业学院（Grenoble Ecole de Management）</li>
+          <li>诺曼底高等商校（EM Normandie）</li>
+          <li>斯特拉斯堡高等商业学校（EM Strasbourg）</li>
+          <li>巴黎诺凡西亚高等商学院（Novancia Paris）</li>
+          <li>法国国立电信管理学院（Telecom Ecole de Management）</li>
+          <li>波城高等商学院（ESC Pau）</li>
+          </ul>
+          <p>专业方向：</p>
+          <ul>
+          <li>商务管理</li>
+          <li>国际金融</li>
+          <li>物流与运输</li>
+          <li>商业发展</li>
+          <li>市场学</li>
+          <li>人力资源</li>
+          <li>信息系统与公关</li>
+          </ul>
+        </div>
+        <div class="details inspace-15" id="NPI">
+          <h1>N+I 工程师联合招生项目</h1>
+          <p>N+I Networld 法国工程师学院联盟，n+I 工程师学院项目是由70多所法国工程师学校组成的联盟，项目涵盖所有科学和工程领域的200多个专业，其中包括农学、农产食品加工、生物科技、化学、物理、机械、电子、信息、航空、环境、土木、数学等领域。遍布法国40多个城市，如巴黎、图卢兹、南特、波尔多、里尔、马赛、里昂、蒙彼利埃、斯特拉斯堡、拉罗谢尔、雷恩、圣埃蒂安、利莫日、南希、梅兹、克莱蒙-费朗等城市。N 代表national, I 代表international。</p>
+          <p>N+I项目是工程师学院提供两年的硕士项目，通过博洛尼亚体系认证，全世界都予以认可。一般情况下，若选择"master N+" 项目的，毕业后可获得工程师文凭。若选择"master i"项目的，毕业后可获得硕士文凭。项目由2年来完成，其中一年半为授课阶段，半年为实习阶段。让你既能学习到理论知识，同时又可以在企业里进行实习。</p>
+        </div>
+        <div class="details inspace-15" id="KAS">
+          <h1>卡斯蒂利亚拉曼恰大学预科项目</h1>
+          <p>学生申请卡斯蒂利亚拉曼恰大学预科项目，在国内大学上一年西班牙语培训以达到签证要求，及5门专业课学习，之后以国内在读大学生的身份签证。进入卡斯蒂利亚拉曼恰大学后，进行1年的语言预科，达到高级西班牙语水平。语言过关之后直接进入大学本科第一年，并获得80学分，可直接转换成本科260学分中的部分专业学分。</p>
+          <p>卡斯蒂亚-拉曼查大学是位于西班牙中部同名大区的主要综合性大学，有2.8万多名学生，2300余教师，分布在大区内四个主要城市的四个校区。学生申请卡斯蒂利亚拉曼恰大学预科项目，在国内大学上一年西班牙语培训以达到签证要求，及5门专业课学习，之后以国内在读大学生的身份签证。进入卡斯蒂利亚拉曼恰大学后，进行1年的语言预科，达到高级西班牙语水平。语言过关之后直接进入大学本科第一年，并获得80学分，可直接转换成本科260学分中的部分专业学分。
+</p>
+        </div>
+        <div class="details inspace-15" id="POL">
+          <h1>Polytech 综合理工院校联盟项目</h1>
+          <p>Polytech Group 是一个由13个法国优秀的理工类大学的工程师学院组成的网络联盟。学制：三年（1年Mundus法语及专业引导课程+2年专业）MUNDUS预科是POLYTECH GROUP综合理工学院集团专门为外国学生单独设计的一个语言加专业知识的预科课程MUNDUS桥梁项目在学院六个学院开设：蒙彼利埃，格勒诺布尔，马赛，尼斯-索菲亚，奥尔良与图尔。通过三年的学习，学生可以获得法国工程师文凭（相当于工程学硕士学位）</p>
+          <p><strong>专业推荐：</strong></p>
+          <p>生物技术，化学工程，食品科学，健康工程</p>
+          <p>环境科学，土木工程，可持续发展</p>
+          <p>电气和计算机工程</p>
+          <p>机械工程，材料科学，能源</p>
+          <p>计算机科学，应用数学</p>
+        </div>
+        <div class="details inspace-15" id="CEL">
+          <h1>CELA免面签项目</h1>
+          <p>为了简化赴法留学签证程序，法国高等教育署增加了免面签项目，但免面签不代表保签，免面签的含义是指申请签证的同学可以免除法国高等教育署的预签证面试，但其他流程还是要按要求进行，例如法语考试、材料递交和审核，更重要的是，免面签并不能省去最后的签证环节。免面签项目大部分每年都会有一些变数，这里就不一一列举了。对&lsquo;免面签&rsquo;项目感兴趣的同学，可以直接联系我们进一步了解。</p>
+          <p>QQ：1572143575</p>
+          <p>微信：158088188</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="wrapper row4 ">
+  <div class="bg_img">
+    <div id="response" class="owl-carousel">
+      <div class="item btmspace-50">
+        <h1>都是学长们给我们的建议，真的很实用</h1>
+        <p>—— 微博留言 臭学渣</p>
+      </div>
+      <div class="item btmspace-50">
+        <h1>开始还有些怀疑，后来发现师姐们的都是过来人</h1>
+        <p>—— 微信留言 小明</p>
+      </div>
+      <div class="item btmspace-50" >
+        <h1>棒棒哒</h1>
+        <p>—— 网站留言 老李头</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="wrapper row5">
+  <div id="copyright" class="clear "> 
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - </p><a href="#">FEliuxue.com</a>
+    <div class="icons">
+      <div class="tooltip" id="tooltip_qq">
+        <a class="fa_icon" href="#"><i class="fa fa-qq"></i></a>
+        <span>
+          <div>
+            <img src="images/QR_codes/qq_fr_qr.jpg">
+            1572143575<br>
+            法国
+          </div>
+          <div>
+            <img src="images/QR_codes/qq_es_qr.jpg">
+            2858660784<br>
+            西班牙
+          </div>
+        </span>
+      </div>
+      <div class="tooltip" id="tooltip_weibo">
+        <a  class="fa_icon" href="http://weibo.com/feliuxue" target="_blank"><i class="fa fa-weibo"></i></a>
+        <span>
+          <div>
+            <img src="images/QR_codes/weibo_qr.jpg">
+            <a href="http://weibo.com/feliuxue" target="_blank">
+              微博 FE-liuxue
+              <br>
+              <p>（点击进入）</p>
+            </a>
+          </div>
+        </span>
+      </div>
+      <div class="tooltip" id="tooltip_wechat">
+        <a  class="fa_icon" href="#"><i class="fa fa-weixin"></i></a>
+        <span>
+          <div>
+            <img src="images/QR_codes/wechat_qr.jpg">
+            微信公众号<br>FE留学
+          </div>
+        </span>
+      </div>
+      <textarea style="display:none;" id="myhidta"></textarea>
+      <div class="tooltip" id="tooltip_mail">
+        <a  class="fa_icon" href="#"><i class="fa fa-envelope-o"></i></a>
+        <span>
+          <div>
+              feliuxue@sina.com
+          </div>
+        </span>
+      </div>
+      <div class="tooltip" id="tooltip_mail">
+        <a  class="fa_icon" href="#"><i class="fa fa-phone"></i></a>
+        <span>
+          <div>
+              18511177987
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
 </body>
 </html>

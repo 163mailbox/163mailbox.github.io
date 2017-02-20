@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<!--
+Template Name: Colossus
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/test.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+
+  <!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+<script src="../layout/scripts/jquery.mixitup.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    
+    var filterList = {
+    
+      init: function () {
+      
+        // MixItUp plugin
+        // http://mixitup.io
+        $('#gallery').mixItUp({
+          selectors: {
+            target: '.one_fifth',
+            filter: '.filter' 
+          },
+          load: {
+            filter: '.1'  
+          }     
+        });               
+      
+      }
+
+    };
+    
+    // Run the show!
+    filterList.init();
+    
+    
+  }); 
+  </script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><img src="../images/logo.jpg"style="width:40px;height:40px;" ><a href="../index.html">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../index.html">首页</a></li>
+        <li><a class="drop" href="fr_main.html">法国留学指南</a>
+          <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="full-width.html">Full Width</a></li>
+            <li><a href="sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="basic-grid.html">Basic Grid</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">西班牙留学指南</a>
+          <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper">
+  <img src="../images/demo/slides/fr.jpg"  alt="">
+</div>
+<div class="wrapper row3">
+  <main class="container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="sort"> 
+      <!-- ################################################################################################ -->
+      <img class="imgr borderedbox inspace-5" src="../images/demo/slides/es.jpg" style="width:60%;height:60%;"alt="">
+
+      <label style="display:none">申请目标 :</label>
+        <!-- <ul id="purpose" style="display:none">
+          <li class="filter active"  data-filter=".1,.2,.3"><a>全部</a></li>
+          <li class="filter"  data-filter=".1"><a>本科</a></li>
+          <li class="filter"  data-filter=".2"><a>硕士</a></li>
+          <li class="filter"  data-filter=".3"><a>职业类文凭</a></li>
+        </ul> -->
+      <br>
+      <label>学校类型 :</label>
+        <ul id="type">
+          <li class="current"   id="t_total"><a class="filter active"  data-filter=".1, .2, .3">全部</a></li>
+          <li  id="public"><a class="filter"  data-filter=".1">公立大学</a></li>  
+          <li   id="business"><a class="filter"  data-filter=".2">高等商学院</a></li>
+          <li  id="language"><a class="filter"  data-filter=".3">语言学校</a></li>
+        </ul>
+    </div>
+    <div id="gallery">
+
+
+
+      <figure>
+        <ul class="nospace clear">
+
+      <li class="one-fifth 3" data-cat=".3">
+          <img src="../images/univ/es/alcala.jpg" alt="" />
+          
+      </li> 
+       <li class="one-fifth 3" data-cat=".3">
+        <div class="portfolio-wrapper">     
+          <img src="../images/univ/es/cordoba.jpg" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title">Visual Infography</a>
+              <span class="text-category">APP</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </div>
+      </li>    
+      
+      <li class="one-fifth 1" data-cat=".1">
+        <div class="portfolio-wrapper">           
+          <img src="../images/univ/es/ESADE.jpg" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title">Sonor's Design</a>
+              <span class="text-category">Web design</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </div>
+      </li>        
+      
+      <li class="one-fifth 2" data-cat=".2">
+        <div class="portfolio-wrapper">     
+          <img src="../images/univ/es/ESIC.jpg" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title">Typography Company</a>
+              <span class="text-category">Business card</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </li>
+
+        <li class="one-fifth 2" data-cat="2">
+        <div class="portfolio-wrapper">     
+          <img src="../images/univ/es/ESIC.jpg" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title">Typography Company</a>
+              <span class="text-category">Business card</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </li>
+      </ul>  
+      <figure>
+       
+    </div>
+
+
+
+
+
+
+
+<!-- <ul id="filters" class="clearfix">
+      <li><span class="filter active" data-filter=".app, .card, .icon">All</span></li>
+      <li><span class="filter" data-filter=".app">App</span></li>
+      <li><span class="filter" data-filter=".card">Card</span></li>
+      <li><span class="filter" data-filter=".icon">Icon</span></li>
+    </ul> -->
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+          
+  </main>
+
+</div>
+      
+
+
+
+<script language="JavaScript">
+///////////////////////////////////////////////////////////////////////
+/////////////            data               ///////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+  var  original_data="阿尔卡拉大学 - La Universidad de Alcala,alcala,1;科尔多巴大学 - La Universidad de Cordoba,cordoba,1;格拉纳达大学 - La Universidad de Granada,Granada,1;哈恩大学 - La Universidad de Jaen,Jaen,1;马拉加大学 - La universidad de Malaga,uma,1;庞培法布拉大学 - La Universidad Pompeu Fabra,pompeu fabra,1;胡安卡洛斯国王大学 - La Universidad Rey Juan Carlos,ReyJC,1;塞维利亚大学 - La Universidad de Sevilla,sevilla,1;巴塞罗那自治大学 - La Universidad Autonoma de Barcelona,UAB,1;马德里自治大学 - La Universidad Autonoma de Madrid,UAM,1;萨拉戈萨大学 - La Universidad Zaragoza,unizarlogo,1;瓦伦西亚理工大学 - La Universidad Politecnica de Valencia,upvlogo,1;瓦伦西亚大学 - La Universidad de Valencia,uvlogo,1;巴塞罗那大学 - La Universidad de Barcelona,巴塞罗那大学,1;康普顿斯大学 - La Universidad Complutense Madrid,康普顿斯大学,1;马德里理工大学 - La Universidad de Madrid,马德里理工大学,1;Hispania,hispania,2;inhispania,INHISPANIA,2;瓦伦西亚大学语言课程 - La Universidad de Valencia,uvlogo1,2;巴塞罗那大学语言课程 - La Universidad de Barcelona,巴塞罗那大学1,2;康普顿斯大学语言课程 - La Universidad Complutense Madrid,康普顿斯大学1,2;萨拉戈萨大学语言课程 - La Universidad Zaragoza,unizarlogo1,2;瓦伦西亚理工大学语言课程 - La Universidad Politecnica de Valencia,upvlogo1,2;胡安卡洛斯国王大学语言课程 - La Universidad Rey Juan Carlos,ReyJC1,2;IELE,iele,2;ESADE商学院,ESADE,3;ESIC商学院,ESIC,3;IE商学院,IE,3;IESE商学院,IESE,3";
+
+///////////////////////////////////////////////////////////////////////
+
+////////data processing
+  var univ=original_data.split(";");
+  for(i=0;i<univ.length;i++){
+    univ[i]=univ[i].split(",");
+  }
+/////////////////
+
+
+
+  function filter(current) {
+    var list= current.parentNode.getElementsByTagName("li");
+    for (i=0;i<list.length;i++){
+      list[i].className="";
+    }
+    current.className="current";
+    var conditions=current.parentNode.parentNode.getElementsByClassName("current");
+    // display(conditions[0].id,conditions[1].id);
+  }
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////    show sort results    ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  function display(purpose,type){
+    var html="";
+    html+="<figure>\r\n<ul class=\"nospace clear\">\r\n";
+
+    ////////////////encode////////////////////
+    var pur,ty;
+    if(purpose=="p_total"){pur=0;}
+    else if(purpose=="bachelor"){pur=1;}
+    else if(purpose=="master"){pur=2;}
+    else if(purpose=="profess"){pur=3;}
+
+    if(type=="t_total"){ty=0;}
+    else if(type=="public"){ty=1;}
+    else if(type=="business"){ty=3;}
+    else if(type=="language"){ty=2;}
+    ///////////////////////////////////////////
+    var selected= new Array() ;
+    for(i=0;i<univ.length;i++){
+
+      if(pur==0 && ty!=0){
+        if(univ[i][2]==ty){
+          selected.push(i);
+        }
+      }
+      else if(pur!=0 && ty==0){
+        if(univ[i][3]==pur){
+          selected.push(i);
+        }
+      }
+      else if(pur!=0 && ty!=0){
+        if(univ[i][3]==pur && univ[i][2]==ty){
+          selected.push(i);
+        }
+      }
+      else{
+        selected.push(i);
+      }
+    }
+    for(i=0;i<univ.length;i++){
+      html+="<li class=\"one_fifth "+univ[i][2]+"\" data-cat=\"."+univ[i][2]+"\" id=\"univ_"+i+"\">";
+      html+="<img src=\"../images/univ/es/"+univ[i][1]+".jpg\" alt=\"\"/><p>"+univ[i][0]+"</p></li>";
+    }
+    
+      
+    $("#gallery").html(html);
+  }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  window.onload = display("p_total","t_total");
+</script>
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="clear"> 
+    <div class="one_quarter first">
+      <h6 class="title">联系我们</h6>
+      <address class="btmspace-15">
+      FE留学<br>
+      </address>
+      <ul class="faico clear">
+        <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
+        <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
+        <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
+      </ul>
+    </div>
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">FeiFeiFR.github.io</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
+
+</body>
+</html>

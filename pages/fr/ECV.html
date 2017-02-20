@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/ECV/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/ECV/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ECV/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ECV/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ECV/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ECV/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <div class="page_container page_right">
+              <h1>法国高等视觉传达艺术设计学院</h1>
+              
+              <p>
+                  ECV学院建立于1984年，目前在法国有5大校区（巴黎，波尔多，南特，艾克斯·普罗旺斯，里尔），ECV校方致力于培养视觉传达和动画、数码游戏方设计的专业人才，与众多著名设计公司的紧密联系带给学生们大量、优质的的实习与工作机会，并为毕业学生颁发一级CNCP文凭，法国、中国教育部均被认可为硕士研究生文凭。
+                  ECV在国际艺术设计界亦享有盛誉，为CUMULUS（国际高等艺术设计院校联盟）成员之一，与400多所优质国际高等艺术学院有常年合作关系，学生可选择到国外进行交流或实习，另外每年有一定名额去美国纽约理工学院NYIT留学，且颁发国际双文凭。
+              </p>
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  ECV一直与市场需求相结合，并与国际各大4A及广告设计集团，及各界企业集团有着密切合作关系，如Publics Group阳狮集团、Fred &amp; Farid Group佛海佛瑞集团、Dreamworks梦工厂、Ubisoft育碧, Louis Vuitton 路易威登, HSBC汇丰银行,
+                  AIRFRANCE法航等等。ECV课程多由是国际4A级（最高级别）广告设计公司的艺术总监授课，因此学生能实时接收到最新设计理念和方法，并给予其在找实习或者工作上的极大优势及更多机会。
+              </p>
+              <p>
+                  在设计业界，网页设计、电视（Canal Plus)、电影、动画制作(Le Chat Potté）、游戏制作（Splinter Cell Conviction) 很多作品的都出去ECV学生之手，且获得多项大奖，如：Cannes Festival de la Pub, Prix Stratégie des
+                  jeunes Créatifs等)，可见该校的教学质量及国际影响。
+              </p>
+
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi white_bg">
+            <div class="page_container page_right">
+              
+                  <p>
+                    巴黎
+                      ：世界四大国际化都市之一，法国政治、经济、文化、时尚艺术中心。
+                  </p>
+                  <p>
+                      波尔多
+                      ：法国西南部城市，世界葡萄酒中心，波尔多盛大的国际酒展-Vinexpo每两年一度
+                  </p>
+                  <p>
+                      南特
+                      ：法国西部最大的城市和法国第六大城市,时代杂志在2004年时将南特选为欧洲最适合居住的城市
+                  </p>
+                  <p>
+                      艾克斯
+                      ·
+                      普罗旺斯：
+                      这座拥有林荫大道、喷泉、华宅的中世纪古城，是普罗旺斯最具有都会风情的地区
+                  </p>
+                  <p>
+                      里尔
+                      ：整个法国北部的经济、教育、交通和文化中心，拥有近百家家跨国企业、数十所高等教育机构
+                  </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                优势专业推荐：
+            </p>
+            <p>
+                视觉传达
+            </p>
+            <p>
+                广告设计
+            </p>
+            <p>
+                数码动画
+            </p>
+            <p>
+                包装设计
+            </p>
+            <p>
+                多媒体设计
+            </p>
+            <p>
+                3D制作
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

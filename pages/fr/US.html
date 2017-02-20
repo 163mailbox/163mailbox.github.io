@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/US/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/US/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/US/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+/*  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  /*.main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/US/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/US/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/US/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 white_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>格勒诺布尔第三大学</h1>
+              
+              <p>
+                  格勒诺布尔三大于1339年建校，是法国著名的文学院，该校一直是法国美誉度很高的教学、科研、技术机构。格勒诺布尔市高等教育在全法处于仅次于巴黎大区的领先地位。1968年法国高等教育改革后从格勒诺布尔大学分离出来，并于1970年正式成立格勒诺布尔第三大学，它是法国专门从事世界法语教师培训和外国留学生法语教学及社会科学领域教学研究的公立综合性大学，有一百年招收外国学生的历史。学校在文学和社会科学领域的研究享誉盛名，每年有一万三千多名学生在此学习。
+              </p>
+              <p>
+                  格勒诺布尔是法国大学生最多的城市之一，在校大学生6万，教师1万，每年还有来自100多个国家和地区的5
+                  千多名外国留学生在此学习。格勒诺布尔为学生提供高质量的学习环境以及丰富多彩的都市文化生活，每年在校园要进行约120次文化活动，包括交响乐演出、现代舞、舞台艺术、艺术展，还有50多个学生文化和体育团体。校园占地面积有1000多公顷，是法国最大的大学城之一。校园风景如画，临近轻轨，交通极为便利。同时，学生还可享受到格勒诺布尔三所大学的公共基础设施和教学设备，包括图书馆、食堂、学生公寓、游泳馆、体育场、医疗机构、语言中心等。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  格勒诺布尔市位于法国东南部，是法罗纳--阿尔卑斯大区伊泽尔省省会,也是法国的第五大城市，人口39万。格市处于阿尔卑斯山脉中心，海拨214米。伊泽尔河将该城分为两部分，被誉为"水之城"。格勒诺布尔为法国著名的科学城，享有法国、乃至欧洲"硅谷"之称。全市二万多科技人员辛勤耕耘在各高科技领域，八千余名科研人员在各实验室、研究所工作。最著名的科研单位有：核能研究中心、信息技术和电子研究所；国际性高科技研究机构：法、德、英合作的中子反应堆
+                  (已有20年历史)，欧洲十国合作的同步加速器，德法合作的天文观测研究中心，法德合作的强磁场研究所等。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+            <strong>信息学与传播学：</strong>
+              信息学与传播学理论、搜索方法论、传播法、信息管理、信息交流的政治与经济。
+            </p>
+            <p>
+              <strong>企业传播：</strong>
+              方法论、专业英语、专业环境概要、企业概要、传播科学。
+             </p>
+            <p>
+              <strong>科技传播：</strong>
+              知识传播、科技传播中的社会实践、英语、方法论。
+            </p>
+            <p>
+              <strong>媒体与记者采访学：</strong>
+              方法论、语言、专业技术、采访写作、采访学与社会。
+            </p>
+            <p>
+              <strong>多媒体传播：</strong>
+              企业与组织、视频写作、媒体中的经济社会、网络作品传播。
+            </p>
+            <p>
+              <strong>文学与艺术：</strong>
+              文学，语言，艺术，语言学，信息与媒体公关、现代文学、古典文学视觉艺术、现代文学与视觉艺术、
+          </p>
+          <p>
+              <strong>语言学：</strong>
+              英语、德语、西班牙语、意大利语、俄语、葡萄牙语、应用外语。
+            </p>
+            <p>
+              <strong>信息与媒介传输：</strong>
+              信息交流、多媒体制作。
+            </p>
+            <p>
+              <strong>多语种翻译：</strong>
+              法语专业编辑、英法互译、法语与第二外语互译、术语学、信息运用、英语写作　　
+          </p>
+          <p>
+              <strong>国际合作与多语种交流：</strong>
+              英语、多语种交流、国际合作、法语专业编辑、信息论运用、项目经营。
+           </p>
+            <p>
+              <strong>国际贸易多方谈判：</strong>
+              法语专业编辑、信息论运用、国际经济、国际贸易法、国际贸易实务、国际管理、国际市场理论、进出口、进出口环境、谈判(理论、技巧)、多元文化公司。
+          </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/ESMOD/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/ESMOD/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ESMOD/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ESMOD/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ESMOD/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ESMOD/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>法国国际服装设计学院</h1>
+              
+              <p>
+                  巴黎高级时装学院ESMOD 是世界顶级的时装院校。它悠久的历史和享誉时装界的教学，吸引着来自世界各地的学生。法国著名服装裁剪大师阿列克斯拉维涅先生（Alexis
+                  LAVIGNE）于1841年设计并创办了世界上第一所时装学院--法国ESMOD高级时装艺术学院。从那时起，ESMOD学院就已经成为全球纺织服装行业中最为重要的培训中心之一。作为一所历史悠久、贡献卓著的时装学院，ESMOD 在整个行业中声名显赫，被称为“时装界的哈佛大学”。
+              </p>
+             
+
+
+            </div>
+            <div class="page_container second_page">
+               <p>
+                  迄今为止，ESMOD的工艺和教学法依然是世界服装界的重要参考。阿列克斯.拉维涅先生同时也是服装界有名的发明创造者，他所发明的专用工具如：皮卷尺、服装专用半身人体模型等仍旧在行业中使用。1989年，ESMOD与几所艺术学校合作，将服装设计与商业销售结合起来。今天，从高级定制到男装、女装、内衣、针织、童装，ESMOD都形成了自己独特的风格，在世界时装舞台上占据着举足轻重的地位。ESMOD坐落于巴黎第九区，紧邻巴黎老佛爷百货和春天百货。从20世纪开始，ESMOD在各大国际时装博览会上崭露头角，从欧洲到日本，足迹遍布世界各地。
+              </p>
+              <p>
+                  ESMOD一直与国际服装界保持着极为密切的联系，并和世界巨型集团如LVMH、ANDRE等建立了紧密的关系，主要赞助与合作单位还有：皮草工业协会、针织服装协会、巴黎春天、DUPON、KIABI、GALERIESLAGAYETTE、SAGA、3M等等。ESMOD为该校的学生建立详尽的跟踪档案，并积极地给他们提供创造各种实习和就业的机会。ESMOD的毕业生很多已在时装界的著名公司担当重任如：YVESSAINTLAURENTCHRISTIANDIOR，CALVINKLEIN，MORGAN，GAPKID，JEANPAULGAULTIER，另外，还有不少学生创立了自己的品牌服装设计、服装工艺。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 light_pagi white_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  巴黎，法国最大城市，欧洲第二大城市，法国的政治、经济、文化、商业中心，是世界四大国际化都市之一。巴黎位于法国北部巴黎盆地的中央，横跨塞纳河两岸。巴黎建都已有1400多年的历史，它不仅是法国，也是西欧的一个政治、经济和文化中心，巴黎香水有“梦幻工业”之称。巴黎是历史之城、美食之都和创作重镇。巴黎是著名的世界艺术之都，印象派美术发源地，芭蕾舞的诞生地，欧洲启蒙思想运动中心，电影的故乡，现代奥林匹克运动会创始地。巴黎又是世界公认的文化之都，大量的科学机构、研究院、图书馆、博物馆、电影院、剧院、音乐厅分布于全市的各个角落。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi dark_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                优势专业推荐：
+            </p>
+            <p>
+                内衣设计
+            </p>
+            <p>
+                男式时装
+            </p>
+            <p>
+                女式时装
+            </p>
+            <p>
+                童装
+            </p>
+            <p>
+                舞台装
+            </p>
+            <p>
+                纺织服装及时装营销等
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>
